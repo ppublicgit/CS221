@@ -1,5 +1,5 @@
 (TeX-add-style-hook
- "DesignDocument"
+ "SoftwareTestPlan2"
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-class-options
                      '(("article" "12pt")))

@@ -6,6 +6,10 @@
    (TeX-run-style-hooks
     "latex2e"
     "article"
-    "art12"))
+    "art12"
+    "titlesec"
+    "hyperref")
+   (LaTeX-add-counters
+    "subsubsubsection"))
  :latex)
 

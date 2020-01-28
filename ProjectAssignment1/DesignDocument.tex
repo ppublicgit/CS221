@@ -1,4 +1,45 @@
-\documentclass[12pt]{article}
+\documentclass[12pt]{article}%
+%\usepackage{titlesec}
+%\setcounter{secnumdepth}{4}
+
+%\titleformat{\paragraph}
+%{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+%\titlespacing*{\paragraph}
+%{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional; useful if paragraphs are to be numbered
+
+\titleformat{\subsubsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+\titlespacing*{\subsubsubsection}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{5}{\z@}%
+  {3.25ex \@plus1ex \@minus.2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{6}{\parindent}%
+  {3.25ex \@plus1ex \@minus .2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\def\toclevel@subsubsubsection{4}
+\def\toclevel@paragraph{5}
+\def\toclevel@paragraph{6}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\def\l@paragraph{\@dottedtocline{5}{10em}{5em}}
+\def\l@subparagraph{\@dottedtocline{6}{14em}{6em}}
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
 
 \begin{titlepage}
 	\clearpage\thispagestyle{empty}
@@ -38,14 +79,44 @@
 \tableofcontents
 
 \section{Overview}
+The purpose of this assignment is to provide a simple and easy way
+to access an employee record class. The class must store an employee ID,
+employee name, department and annual salary of each employee. The class
+will eventually be ported to an employee database.
 
 \section{Referenced Documents}
 Programming Assignment 1 Statement of Work.
 
 \section{Architectural Design}
 \subsection{Concept of Execution}
+This program creates a class structure to store information for an
+individual employee. The class stores an employee's first and last name,
+a unique employee ID, the employee's department ID and the employee's salary.
+
+A database manager will have access to public get and set methods of the class
+in order to set the various attributes for the employee as well as get them later.
+There is also a default constructor that initializes the class as well as a constructor
+that handles all inputs being included. A quick and easy print will also be provided for quickly
+displaying all attributes of the class.
+
 \subsection{Abstract Data Type}
+The employee record structure is implemented with a class structure separated in a cpp and header file.
+
 \subsection{Code Outline}
+This program will consist of the following fiels: EmployeeRecord.h and EmployeeRecord.cpp
+\begin{itemize}
+    \item EmployeeRecord() -- default constructor
+    \item EmplyoeeRecord(int ID, char *fName, char *lName, int dept, double sal) -- initialization constructor
+    \item getID() -- return int value of employee id
+    \item setID(int ID) -- set employee id
+    \item getName(char* fName, char *lName) -- copy employee's first and last name into pointers passed
+    \item setName(char* fName, char *lName) -- set employee's first and last name to pointers passed
+    \item getDept(int& d) -- get value of employee's department
+    \item setDept(int d) -- set value of employee's department
+    \item getSalary(double *sal) -- pointer function to get employee's salary
+    \item setSalary(double sal) -- set employee's salary
+
+\end{itemize}
 
 \section{Detailed Design}
 \subsection{Source File: EmployeeRecord.h and EmployeeRecord.cpp}
@@ -64,7 +135,7 @@ Programming Assignment 1 Statement of Work.
 \subsubsubsection{Tracability}
 
 \subsubsection{Function: main()}
-\subsubsubsection{Purpose}
+  \subsubsubsection{Purpose}
 \subsubsubsection{Arguments}
 \subsubsubsection{Return Value}
 \subsubsubsection{Function Outline in Pseudocode}

@@ -1,0 +1,11 @@
+\documentclass[12pt]{article}
+
+\begin{document}
+\title{Software Design Document for Employee Record Database}
+\subtitle{Programming Assigment 1}
+\date{January 29, 2020}
+\author{Paul Abers}
+\maketitle
+
+
+\end{document}

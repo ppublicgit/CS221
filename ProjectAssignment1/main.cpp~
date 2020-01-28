@@ -1,0 +1,12 @@
+#include <iostream>
+#include "EmployeeRecord.h"
+#include "test.h"
+
+int main(){
+    char temp[32] = "hello";
+    std::cout << temp << std::endl;
+    int a = test(10, 10);
+    std::cout << a << std::endl;
+    EmployeeRecord er(0, temp, temp,0,0.0);
+    er.printRecord();
+}

@@ -46,10 +46,10 @@
 	%\vspace{4cm}
 	{\Huge \textbf{Software Design Document \\
         for \\
-        Employee Record Database}} \\
+        Employee Record Database with Customer List}} \\
 	\vspace{1cm}
-	{\large \textbf{Programming Assignment 1 \\
-      January 29, 2020} \par}
+	{\large \textbf{Programming Assignment 2 \\
+      February 20, 2020} \par}
 	\vspace{4cm}
 	{\normalsize Prepared By \\ % \\ specifies a new line
       Paul Abers \\
@@ -75,32 +75,42 @@
 
 \section{System Overview}
 The purpose of this assignment is to provide a simple and easy way
-to access an employee record class. The class must store an employee ID,
-employee name, department and annual salary of each employee. The class
-will eventually be ported to an employee database.
+to access an employee record database. The database has three parts,
+the employee record class, a store class and a customer list class.
+The employee record class must store an employee ID,
+employee name, department, annual salary of each employee and a customer
+list class. The customer list class stores a list of store classes. The store
+class stores information on a single customer store.
 
 \section{Referenced Documents}
-Programming Assignment 1 Statement of Work.
+Programming Assignment 1 Statement of Work. \\
+Programming Assignment 2 Statement of Work.
 
 \section{Architectural Design}
 \subsection{Concept of Execution}
 This program creates a class structure to store information for an
-individual employee. The class stores an employee's first and last name,
-a unique employee ID, the employee's department ID and the employee's salary.
+individual employee, a store and a list of stores. The employee class stores an
+employee's first and last name, a unique employee ID, the employee's department ID, the employee's salary,
+and a list of customer stores for the employee. The customer list class stores a list of customer stores.
 
 A database manager will have access to public get and set methods of the class
 in order to set the various attributes for the employee as well as get them later.
+There is also a get customer list function.
 There is also a default constructor that initializes the class as well as a constructor
 that handles all inputs being included. A quick and easy print will also be provided for quickly
 displaying all attributes of the class.
+The customer list class will have functions
+for adding a store, removing a store, getting a store based on store id and printing a store info.
 
 \subsection{Abstract Data Type}
 The employee record structure is implemented with a class structure separated in a cpp and header file.
 
 \subsection{Code Outline}
-This program will consist of the following files: EmployeeRecord.h and EmployeeRecord.cpp.
+This program will consist of the following files: EmployeeRecord.h, EmployeeRecord.cpp, Store.h, Store.cpp,
+CustomerList.h and CustomerList.cpp.
 \hfill\\
 \hfill\\
+EmployeeRecord Class
 \underline{Private Attributes}:
 \begin{itemize}
     \item m\_iEmployeeID -- int value for employee id
@@ -124,6 +134,33 @@ This program will consist of the following files: EmployeeRecord.h and EmployeeR
     \item setSalary(double sal) -- set employee's salary
     \item printRecord() -- prints to screen all data for employee's record
 \end{itemize}
+\hfill\\
+\hfill\\
+CustomerList Class
+\underline{Private Attributes}:
+\begin{itemize}
+    \item m\_iEmployeeID -- int value for employee id
+    \item m\_sLastName -- character array of length 32 for last name
+    \item m\_sFirstName -- character array of length 32 for first name
+    \item m\_iDeptId -- int for department id
+    \item m\_dSalary -- double for employee's salary
+    \end{itemize}
+    \hfill\\
+\underline{Public Methods}:
+\begin{itemize}
+    \item EmployeeRecord() -- default constructor
+    \item EmplyoeeRecord(int ID, char *fName, char *lName, int dept, double sal) -- initialization constructor
+    \item getID() -- return int value of employee id
+    \item setID(int ID) -- set employee id
+    \item getName(char* fName, char *lName) -- copy employee's first and last name into pointers passed
+    \item setName(char* fName, char *lName) -- set employee's first and last name to pointers passed
+    \item getDept(int\& d) -- get value of employee's department
+    \item setDept(int d) -- set value of employee's department
+    \item getSalary(double *sal) -- pointer function to get employee's salary
+    \item setSalary(double sal) -- set employee's salary
+    \item printRecord() -- prints to screen all data for employee's record
+\end{itemize}
+
 
 \section{Detailed Design}
 \subsection{Source File: EmployeeRecord.h and EmployeeRecord.cpp}
@@ -287,6 +324,115 @@ Print all internal variable values to screen.
 \subsubsubsection{Tracability}
 This function will fulfil requirement 2.2.2.8 of SOW by providing a default constructor for the
 employee record class.
+
+\subsection{Source File: CustomerList.h and CustomerList.cpp}
+\subsubsection{Function: CustomerList()}
+\subsubsubsection{Purpose}
+This is the default constructor for the CustomerList class.
+\subsubsubsection{Arguments}
+This default constructor takes no arguments.
+\subsubsubsection{Return Value}
+A constructor, therefore no value is returned.
+\subsubsubsection{Function Outline in Pseudocode}
+Initialize m_pHead
+\subsubsubsection{Tracability}
+This function will fulfil requirement 2.2.2.1 of SOW by providing a default constructor for the
+employee record class.
+
+\subsubsection{Function: \textasciitilde CustomerList()}
+\subsubsubsection{Purpose}
+This is the default destructor for the CustomerList class.
+\subsubsubsection{Arguments}
+This default constructor takes no arguments.
+\subsubsubsection{Return Value}
+A constructor, therefore no value is returned.
+\subsubsubsection{Function Outline in Pseudocode}
+Start at m_pHead \\
+Loop over each Store object in linked list \\
+delete each Store object
+\subsubsubsection{Tracability}
+This function was not specified in Statement of Work.
+
+\subsubsection{Function: addStore()}
+\subsubsubsection{Purpose}
+Add a store to the customer list.
+\subsubsubsection{Arguments}
+A pointer to a store object.
+\subsubsubsection{Return Value}
+Bool to indicate success of insertion.
+\subsubsubsection{Function Outline in Pseudocode}
+Set value for m_pNext of Store object equal to store object pointer argument \\
+return true
+\subsubsubsection{Tracability}
+This function will fulfil requirement 2.0.4.2.1 of SOW 2.
+
+\subsubsection{Function: removeStore()}
+\subsubsubsection{Purpose}
+Remove a store from the customer list.
+\subsubsubsection{Arguments}
+Integer for store with id ID to remove
+\subsubsubsection{Return Value}
+A pointer to a store object.
+\subsubsubsection{Function Outline in Pseudocode}
+Start at m_pHead \\
+Iterate through list until m_pHead's next store's id equals input id. \\
+Set temporary store variable equal to m_pHead's next store \\
+Set m_pHead's next pointer equal to m_pHead's next next pointer\\
+Set temporary store variables next pointer equal to NULL\\
+break loop iteration \\
+return temporary store.
+\subsubsubsection{Tracability}
+This function will fulfil requirement 2.0.4.2.2 of SOW2
+
+\subsubsection{Function: getStore()}
+\subsubsubsection{Purpose}
+Return a pointer to a store object with a given Id if in the list.
+\subsubsubsection{Arguments}
+Integer for store ID to get.
+\subsubsubsection{Return Value}
+a pointer to a store object if Id found, else NULL
+\subsubsubsection{Function Outline in Pseudocode}
+Set return pointer to Null \\
+Start at m_pHead \\
+Iterate through list until m_pHead's next store's id equals input id. \\
+If m_pHead's next store id equals input id, set ret equal to m_phead next store, and break loop \\
+return temporary store.
+\subsubsubsection{Tracability}
+This function will fulfil requirement 2.0.4.2.3 of SOW2
+
+\subsubsection{Function: updateStore()}
+\subsubsubsection{Purpose}
+Update a stores value
+\subsubsubsection{Arguments}
+Integer for store Id to update, char array for name of store, char array for address of store,
+char array for city of store, char aray for street of store, char array for zipcode of store.
+\subsubsubsection{Return Value}
+A boolean to indicate success of insertion.
+\subsubsubsection{Function Outline in Pseudocode}
+set success equal to false \\
+Start at m_pHead \\
+Iterate through list until m_pHead's next store's id equals input id. \\
+\quad If m_pHead's next store id equals input id, call all set functions for next store data with input args \\
+\quad \quad set success equal to true \\
+\quad \quad break loop \\
+return success
+\subsubsubsection{Tracability}
+This function will fulfil requirement 2.0.4.2.4 of SOW2
+
+\subsubsection{Function: printStoresInfo()}
+\subsubsubsection{Purpose}
+Print all store info for all stores in customer list
+\subsubsubsection{Arguments}
+No arguments
+\subsubsubsection{Return Value}
+oid
+\subsubsubsection{Function Outline in Pseudocode}
+Start loop at m_pHead \\
+Loop over each store in customer list \\
+\quad print store info \\
+return\\
+\subsubsubsection{Tracability}
+This function will fulfil requirement 2.0.4.2.5 of SOW2
 
 \end{document}
 %%% Local Variables:

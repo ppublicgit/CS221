@@ -1,0 +1,52 @@
+/***********************************************
+ * File: CustomerList.cpp
+ * Author: Paul Abers
+ * Assignment 2: Customer List Class
+ *
+ * This program is entirely my own work.
+ **********************************************/
+
+#include <iostream>
+#include <string.h>
+#include "CustomerList.h"
+
+CustomerList::CustomerList() { //Default Constructor with initialized values for class
+    m_pHead = NULL;
+}
+
+CustomerList::~CustomerList() { //Destructor for class
+	//;
+}
+
+bool CustomerList::addStore(Store *s) { //add a store to customer list
+	return true;
+}
+
+Store *CustomerList::removeStore(int ID) { //remove store with id ID from list
+	return NULL;
+}
+
+Store *CustomerList::getStore(int ID) { //get store with id ID from list
+	return NULL;
+}
+
+bool CustomerList::updateStore(int ID, char *name, char *addr, char *city, char *st, char *zip) { // update store with id ID from list
+	return true;
+}
+
+void CustomerList::printStoresInfo() { //print each stores info in list
+	std::cout << "---------Customer List-----------" << std::endl;
+	if (m_pHead != NULL) {
+		Store *curr = m_pHead;
+		while (curr->m_pNext != NULL) {
+			curr->printStoreInfo();
+			curr = curr->m_pNext;
+		}
+		curr->printStoreInfo();
+	}
+	else {
+		std::cout << "-------------Empty List-----------" << std::endl;
+	}
+	std::cout << std::endl;
+	return;
+}

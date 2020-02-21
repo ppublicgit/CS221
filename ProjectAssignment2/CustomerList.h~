@@ -1,0 +1,25 @@
+/***********************************************
+ * File: EmployeeRecord.h
+ * Author: Paul Abers
+ * Assignment 2: Employee Record Class
+ *
+ * This program is entirely my own work.
+ **********************************************/
+
+
+#ifndef EMPLOYEERECORD_H
+#define EMPLOYEERECORD_H
+
+#include "CustomerList.h"
+
+class EmployeeRecord {
+    private: // Declare private class variables
+     	Store *m_pHead;
+
+     public: // Declare public class methods
+        CustomerList();
+		~CustomerList();
+    	CustomerList *getCustomerList();
+};
+
+#endif

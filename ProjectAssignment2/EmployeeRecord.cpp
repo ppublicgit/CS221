@@ -1,7 +1,7 @@
 /***********************************************
  * File: EmployeeRecord.cpp
  * Author: Paul Abers
- * Assignment 1: Employee Record Class
+ * Assignment 2: Employee Record Class
  *
  * This program is entirely my own work.
  **********************************************/
@@ -18,8 +18,9 @@ EmployeeRecord::EmployeeRecord() { //Default Constructor with initialized values
     strcpy(m_sLastName, "");
     m_iDeptID = 0;
     m_dSalary = 0.0;
+	m_pCustomerList = new CustomerList;
 }
-EmployeeRecord::EmployeeRecord(int ID, char *fName, char *lName, int dept, double sal) {
+EmployeeRecord::EmployeeRecord(int ID, char *fName, char *lName, int dept, double sal, CustomerList *cl) {
 	//Optional constructor to set all values for private member attributes on construction.
     m_iEmployeeID = ID;
 	m_sFirstName = new char[32];
@@ -28,10 +29,13 @@ EmployeeRecord::EmployeeRecord(int ID, char *fName, char *lName, int dept, doubl
     strcpy(m_sLastName, lName);
     m_iDeptID = dept;
     m_dSalary = sal;
+	m_pCustomerList = new CustomerList;
+	m_pCustomerList = cl;
 }
 EmployeeRecord::~EmployeeRecord() { //Destructor for class. Properly deallocate dynamic character arrays.
 	delete [] m_sFirstName;
 	delete [] m_sLastName;
+	delete m_pCustomerList;
 }
 int EmployeeRecord::getID() { //simple get function for employee id
     return m_iEmployeeID;
@@ -52,17 +56,15 @@ void EmployeeRecord::setName(char *fName, char *lName) { // set character arrays
     strcpy(m_sLastName, lName);
     return;
 }
-void EmployeeRecord::getDept(int& d) { // reference function to get department id
-	d = m_iDeptID;
-    return;
+int EmployeeRecord::getDept() { // reference function to get department id
+	return m_iDeptID;
 }
 void EmployeeRecord::setDept(int d) { // simple set fucntion for department id
 	m_iDeptID = d;
     return;
 }
-void EmployeeRecord::getSalary(double *sal) { // pointer function to get employee salary.
-	*sal = m_dSalary;
-    return;
+double EmployeeRecord::getSalary() { // pointer function to get employee salary.
+	return m_dSalary;
 }
 void EmployeeRecord::setSalary(double sal) { // simple set function for employee salary
 	m_dSalary = sal;
@@ -78,4 +80,7 @@ void EmployeeRecord::printRecord() { // print data of employee record in a easil
 	std::cout << "------------------------------------------------" << std::endl;
 	std::cout << std::endl;
     return;
+}
+CustomerList *EmployeeRecord::getCustomerList() { //get customer list pointed to by m_pCustomerList
+	return m_pCustomerList;
 }

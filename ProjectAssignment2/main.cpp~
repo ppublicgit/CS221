@@ -1,0 +1,13 @@
+#include <iostream>
+#include "EmployeeRecord.h"
+#include "CustomerList.h"
+#include "Store.h"
+
+int main(){
+	char fname2[32] = "James";
+	char lname2[32] = "Abers";
+	CustomerList *cl = new CustomerList;
+    EmployeeRecord er2(2, fname2, lname2, 3, 50000.0, cl);
+
+	return 0;
+}

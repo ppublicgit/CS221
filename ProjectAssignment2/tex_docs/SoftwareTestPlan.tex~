@@ -1,0 +1,230 @@
+\documentclass[12pt]{article}%
+
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional; useful if paragraphs are to be numbered
+
+\titleformat{\subsubsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+\titlespacing*{\subsubsubsection}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{5}{\z@}%
+  {3.25ex \@plus1ex \@minus.2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{6}{\parindent}%
+  {3.25ex \@plus1ex \@minus .2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\def\toclevel@subsubsubsection{4}
+\def\toclevel@paragraph{5}
+\def\toclevel@paragraph{6}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\def\l@paragraph{\@dottedtocline{5}{10em}{5em}}
+\def\l@subparagraph{\@dottedtocline{6}{14em}{6em}}
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\begin{document}
+
+\begin{titlepage}
+	\clearpage\thispagestyle{empty}
+	\centering
+	\vspace{2cm}
+
+	% Titles
+	%{\large  \par}
+	%\vspace{4cm}
+	{\Huge \textbf{Software Test Plan \\
+        for \\
+        Employee Record Database}} \\
+	\vspace{1cm}
+	{\large \textbf{Programming Assignment 1 \\
+      January 29, 2020} \par}
+	\vspace{4cm}
+	{\normalsize Prepared By \\ % \\ specifies a new line
+      Paul Abers \\
+      pa0034@uah.edu \par}
+	\vspace{2cm}
+
+    \vspace{2cm}
+
+	% Information about the University
+	{\normalsize Prepared For \\
+		Mr. James Williamson \\
+		CS 221, Data Structures in C++ \\
+        Computer Science Department \\
+        University of Alabama in Huntsville \par}
+
+      \vspace{2cm}
+
+	\pagebreak
+
+\end{titlepage}
+
+\tableofcontents
+
+\section{System Overview}
+The purpose of this assignment is to provide a simple and easy way
+to access an employee record class. The class must store an employee ID,
+employee name, department and annual salary of each employee. The class
+will eventually be ported to an employee database.
+
+\section{Referenced Documents}
+Programming Assignment 1: Statement of Work.
+Software Design Document for the Emplyoee Record Database program.
+
+\section{Test Procedures}
+The following tests will be performed on the software before its release.
+\subsection{Source File: EmployeeRecord.h and EmployeeRecord.cpp}
+\subsubsection{Function: EmployeeRecord()}
+\subsubsubsection{Purpose and procedure}
+This test will determine if the EmployeeRecord constructor is working correctly.
+\subsubsubsection{Inputs}
+First, a call to the default constructor. Then a call to constructor that takes all inputs.
+\subsubsubsection{Expected Output}
+The employee record to be initialized to the default state or the input initialized state
+depending on the call made to the constructor.
+\subsubsubsection{Success Criteria}
+The employee record will be checked by calling the constructor and then comparing its state with
+calls to all the get methods as well as printRecord(). All should match the expected values that
+were set by either the default or input initialized constructor calls.
+
+\subsubsection{Function: ~EmployeeRecord()}
+\subsubsubsection{Purpose and procedure}
+This test will determine if the destructor for the employee record class is working properly. A test
+employee record already set will be supplied.
+\subsubsubsection{Inputs}
+An employee record class with all values already set.
+\subsubsubsection{Expected Output}
+The employee record class to properly deallocate memory from all internal variables.
+\subsubsubsection{Success Criteria}
+Initialize multiple employee record classes and destruct them. Make sure that memory for the program does
+not keep increasing after employee records are destroyed.
+
+\subsubsection{Function: getID()}
+\subsubsubsection{Purpose and procedure}
+This test will determine if the getId() function is working correctly. A test
+employee record already set will be supplied.
+\subsubsubsection{Inputs}
+An employee record class with employee id set to a known integer value.
+\subsubsubsection{Expected Output}
+The employee record's currently set value.
+\subsubsubsection{Success Criteria}
+The int returned by getID() matches the int value set for the employee id.
+
+\subsubsection{Function: setID()}
+\subsubsubsection{Purpose and procedure}
+This test will determine if the setId() function is working correctly. A test
+employee record already set will be supplied.
+\subsubsubsection{Inputs}
+An employee record class with employee id set to a known integer value.
+Employee record's id  will then be set to a new value.
+\subsubsubsection{Expected Output}
+The employee record's new int value to be returned by getID().
+\subsubsubsection{Success Criteria}
+The int returned by getID() matches the int value set for the employee id.
+
+\subsubsection{Function: getName()}
+\subsubsubsection{Purpose and procedure}
+This test will determine if the getName() function is working correctly. A test
+employee record already set will be supplied.
+\subsubsubsection{Inputs}
+An employee record class with employee first name and last name set to known character
+array values.
+\subsubsubsection{Expected Output}
+The employee record's currently set values for the first and last name.
+\subsubsubsection{Success Criteria}
+The character arrays passed into getName to be changed to the current values
+for the employee record's first and last names.
+
+\subsubsection{Function: setName()}
+\subsubsubsection{Purpose and procedure}
+This test will determine if the setName() function is working correctly. A test
+employee record already set will be supplied.
+\subsubsubsection{Inputs}
+An employee record class with employee first name and last name set to known
+character array values.
+\subsubsubsection{Expected Output}
+The employee record's first name and last name to be changed to the first and
+last name passed to the function.
+\subsubsubsection{Success Criteria}
+The employee record's first and last name to start at one known value, be set by the call
+to the function and the values copied by getName() to match those passed by setName().
+
+\subsubsection{Function: getDept()}
+\subsubsubsection{Purpose and procedure}
+This test will determine if the getDept() function is working correctly. A test
+employee record already set will be supplied.
+\subsubsubsection{Inputs}
+An employee record class with employee department set to a known integer value.
+\subsubsubsection{Expected Output}
+The employee record's currently set department value to be copied into the reference variable
+passed into the function.
+\subsubsubsection{Success Criteria}
+The int value copied into the passed reference variable to match the int value of the employee record's
+department value.
+
+\subsubsection{Function: setDept()}
+\subsubsubsection{Purpose and procedure}
+This test will determine if the setDept() function is working correctly. A test
+employee record already set will be supplied.
+\subsubsubsection{Inputs}
+An employee record class with employee department set to a known integer value.
+\subsubsubsection{Expected Output}
+The employee record's department value to be set to the new value passed by the call of the method
+setDept().
+\subsubsubsection{Success Criteria}
+The department to start as a known integer, be set to a new integer value, and the subsequent call
+to getDept() to match the value of its referenced argument with that of the value passed to setDept().
+
+\subsubsection{Function: getSalary()}
+\subsubsubsection{Purpose and procedure}
+This test will determine if the getSalary() function is working correctly. A test
+employee record already set will be supplied.
+\subsubsubsection{Inputs}
+An employee record class with employee salary set to a known integer value.
+\subsubsubsection{Expected Output}
+The employee record's currently set salary value.
+\subsubsubsection{Success Criteria}
+The double copied into the pointer by getID() matches the double value for the current employee's sacurrent value for the employee's salary.
+
+\subsubsection{Function: setSalary()}
+\subsubsubsection{Purpose and procedure}
+This test will determine if the setSalary() function is working correctly. A test
+employee record already set will be supplied.
+\subsubsubsection{Inputs}
+An employee record class with employee salary set to a known integer value.
+\subsubsubsection{Expected Output}
+The employee record's salary to be set to the new salary.
+\subsubsubsection{Success Criteria}
+The salary to start as a known double, be set to a new double value, and the subsequent call
+to getSalary() to match the value of its pointer argument with that of the value passed to setDept().
+
+\subsubsection{Function: printRecord()}
+\subsubsubsection{Purpose and procedure}
+This test will determine if the printRecord() function is working correctly. A test
+employee record already set will be supplied.
+\subsubsubsection{Inputs}
+An employee record class with all of its member variables set to known values.
+\subsubsubsection{Expected Output}
+Proper display of employee record to screen.
+\subsubsubsection{Success Criteria}
+All member variables to be properly printed to screen with their known values.
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

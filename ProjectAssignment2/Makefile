@@ -9,12 +9,16 @@ CXXFLAGS = -Wall -g
 # ****************************************************
 # Targets needed to bring the executable up to date
 
-main: main.o test.o EmployeeRecord.o
-	$(CXX) $(CXXFLAGS) -o main main.o test.o EmployeeRecord.o
+main: main.o EmployeeRecord.o CustomerList.o Store.o
+	$(CXX) $(CXXFLAGS) -o main main.o EmployeeRecord.o CustomerList.o Store.o
 
 # The main.o target can be written more simply
 
-main.o: main.cpp test.h EmployeeRecord.h
+main.o: main.cpp EmployeeRecord.h CustomerList.h Store.h
 	$(CXX) $(CXXFLAGS) -c main.cpp
 
-EmployeeRecord.o: EmployeeRecord.h
+EmployeeRecord.o: EmployeeRecord.h CustomerList.h Store.h
+
+CustomerList.o: CustomerList.h Store.h
+
+Store.o: Store.h

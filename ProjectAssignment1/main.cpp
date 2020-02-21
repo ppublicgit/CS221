@@ -2,15 +2,19 @@
 #include "EmployeeRecord.h"
 
 int main(){
+	EmployeeRecord* p_er = new EmployeeRecord;
+	p_er->setID(2);
+	p_er->printRecord();
+
 	EmployeeRecord er;
 	er.printRecord();
-	
+
 	std::cout << "Current ID is: " << er.getID() << std::endl;
     std::cout << "Setting ID to 4" << std::endl;
 	er.setID(4);
 	std::cout << "New ID is: " << er.getID() << std::endl;
 	std::cout << std::endl;
-	
+
 	char fname[32];
 	char lname[32];
 	er.getName(fname, lname);
@@ -62,6 +66,6 @@ int main(){
     er2.printRecord();
 
 	delete new_salary_ptr;
-	
+
 	return 0;
 }

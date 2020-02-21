@@ -46,10 +46,10 @@
 	%\vspace{4cm}
 	{\Huge \textbf{Software Design Document \\
         for \\
-        Employee Record Database}} \\
+        Employee Record Database with Customer List}} \\
 	\vspace{1cm}
-	{\large \textbf{Programming Assignment 1 \\
-      January 29, 2020} \par}
+	{\large \textbf{Programming Assignment 2 \\
+      February 20, 2020} \par}
 	\vspace{4cm}
 	{\normalsize Prepared By \\ % \\ specifies a new line
       Paul Abers \\
@@ -75,21 +75,28 @@
 
 \section{System Overview}
 The purpose of this assignment is to provide a simple and easy way
-to access an employee record class. The class must store an employee ID,
-employee name, department and annual salary of each employee. The class
-will eventually be ported to an employee database.
+to access an employee record database. The database has three parts,
+the employee record class, a store class and a customer list class.
+The employee record class must store an employee ID,
+employee name, department, annual salary of each employee and a customer
+list class. The customer list class stores a list of store classes. The store
+class stores information on a single customer store.
 
 \section{Referenced Documents}
-Programming Assignment 1 Statement of Work.
+Programming Assignment 1 Statement of Work. \\
+Programming Assignment 2 Statement of Work.
 
 \section{Architectural Design}
 \subsection{Concept of Execution}
 This program creates a class structure to store information for an
-individual employee. The class stores an employee's first and last name,
-a unique employee ID, the employee's department ID and the employee's salary.
+individual employee, a store and a list of stores. The employee class stores an
+employee's first and last name, a unique employee ID, the employee's department ID, the employee's salary,
+and a list of customer stores for the employee. The customer list class stores a list of customer stores.
 
 A database manager will have access to public get and set methods of the class
 in order to set the various attributes for the employee as well as get them later.
+There is also a get customer list function. The customer list class will have functions
+for adding a store, removing a store, getting a store based on store id and printing a store info.
 There is also a default constructor that initializes the class as well as a constructor
 that handles all inputs being included. A quick and easy print will also be provided for quickly
 displaying all attributes of the class.

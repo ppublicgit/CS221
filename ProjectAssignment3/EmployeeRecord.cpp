@@ -35,8 +35,8 @@ EmployeeRecord::EmployeeRecord(int ID, char *fName, char *lName, int dept, doubl
 EmployeeRecord::~EmployeeRecord() { //Destructor for class. Properly deallocate dynamic character arrays.
 	delete [] m_sFirstName;
 	delete [] m_sLastName;
-    if (m_pCustomerList != NULL){
-    delete m_pCustomerList;
+    if (m_pCustomerList != NULL) {
+            delete m_pCustomerList;
     }
 }
 int EmployeeRecord::getID() { //simple get function for employee id

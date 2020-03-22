@@ -7,7 +7,12 @@
 int main(){
 
     // create customer lists, and datasets
-    CustomerList *p_EmptyCL = new CustomerList;
+    CustomerList *p_EmptyCL1 = new CustomerList;
+    CustomerList *p_EmptyCL2 = new CustomerList;
+    CustomerList *p_EmptyCL3 = new CustomerList;
+    CustomerList *p_EmptyCL4 = new CustomerList;
+    CustomerList *p_EmptyCL5 = new CustomerList;
+    CustomerList *p_EmptyCL6 = new CustomerList;
     CustomerList *p_FullCL = new CustomerList;
 
     char name[5] = "name";
@@ -59,32 +64,32 @@ int main(){
 
     char fname1[32] = "James";
 	char lname1[32] = "Abers";
-    EmployeeRecord *er1 = new EmployeeRecord(50, fname1, lname1, 3, 50000.0, p_EmptyCL);
+    EmployeeRecord *er1 = new EmployeeRecord(50, fname1, lname1, 3, 50000.0, p_EmptyCL1);
     //er2.printRecord();
 
     char fname2[32] = "Paul";
 	char lname2[32] = "Abers";
-    EmployeeRecord *er2 = new EmployeeRecord(30, fname2, lname2, 3, 50000.0, p_EmptyCL);
+    EmployeeRecord *er2 = new EmployeeRecord(30, fname2, lname2, 3, 50000.0, p_EmptyCL2);
     //er2.printRecord();
 
     char fname3[32] = "Max";
 	char lname3[32] = "Abers";
-    EmployeeRecord *er3 = new EmployeeRecord(20, fname3, lname3, 3, 50000.0, p_EmptyCL);
+    EmployeeRecord *er3 = new EmployeeRecord(20, fname3, lname3, 3, 50000.0, p_EmptyCL3);
     //er2.printRecord();
 
     char fname4[32] = "Rich";
 	char lname4[32] = "Abers";
-    EmployeeRecord *er4 = new EmployeeRecord(40, fname4, lname4, 3, 50000.0, p_EmptyCL);
+    EmployeeRecord *er4 = new EmployeeRecord(40, fname4, lname4, 3, 50000.0, p_EmptyCL4);
     //er2.printRecord();
 
     char fname5[32] = "Jazz";
 	char lname5[32] = "Abers";
-    EmployeeRecord *er5 = new EmployeeRecord(70, fname5, lname5, 3, 50000.0, p_EmptyCL);
+    EmployeeRecord *er5 = new EmployeeRecord(70, fname5, lname5, 3, 50000.0, p_EmptyCL5);
     //er2.printRecord();
 
     char fname6[32] = "Ann";
 	char lname6[32] = "Abers";
-    EmployeeRecord *er6 = new EmployeeRecord(60, fname6, lname6, 3, 50000.0, p_FullCL);
+    EmployeeRecord *er6 = new EmployeeRecord(60, fname6, lname6, 3, 50000.0, p_EmptyCL6);
 
     char fname7[32] = "Lana";
 	char lname7[32] = "Abers";
@@ -153,6 +158,7 @@ int main(){
     ret = ed->removeEmployee(70);
 
     ret = ed->getEmployee(30);
+    delete ed;
 
 	return 0;
 }

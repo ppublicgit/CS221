@@ -9,15 +9,13 @@
 #include "EmployeeDatabase.h"
 
 EmployeeDatabase::EmployeeDatabase() {
-    //std::cout << "constructed" << std::endl;
 }
 
 EmployeeDatabase::~EmployeeDatabase() {
-    //std::cout << "destructed" << std::endl;
+    destroyTree(m_pRoot);
 }
 
 bool EmployeeDatabase::addEmployee(EmployeeRecord *e) {
-    //std::cout << "added" << std::endl;
     bool ret;
     if (m_pRoot == NULL) {
         m_pRoot = e;
@@ -202,7 +200,6 @@ EmployeeRecord *EmployeeDatabase::removeHelp(int ID, EmployeeRecord *nodeParent)
     node->getName(fname, lname);
     ret = new EmployeeRecord(node->getID(), fname, lname, node->getDept(), node->getSalary(), node->getCustomerList());
     node->removeCustomerList();
-    std::cout << "removing node: " << node->getID() << std::endl;
     if (node->m_pLeft == NULL && node->m_pRight == NULL) {
         if (nodeParent->m_pLeft != NULL && ID == nodeParent->m_pLeft->getID()) {
             nodeParent->m_pLeft = NULL;
@@ -258,28 +255,30 @@ EmployeeRecord *EmployeeDatabase::getSuccessor(EmployeeRecord *node) {
 
 void EmployeeDatabase::printEmployeeRecords() {
     if (m_pRoot == NULL) {
-        std::cout << "-------Empty Employee Databse-------" << std::endl;
+        std::cout << "============= Empty Employee Database ==========" << std::endl;
     }
     else {
-        printEmployeeRecords(m_pRoot, 0);
+        std::cout << "============== Employee Database ===============" << std::endl;
+        printEmployeeRecords(m_pRoot);
+        std::cout << "================================================" << std::endl;
+        std::cout << std::endl;
     }
 }
 
-void EmployeeDatabase::printEmployeeRecords(EmployeeRecord *rt, int level) {
+void EmployeeDatabase::printEmployeeRecords(EmployeeRecord *rt) {
     if (rt != NULL) {
-        ++level;
-        printEmployeeRecords(rt->m_pLeft, level);
-        //rt->printRecord();
-        for (int i=0; i!=level; i++) {
-            std::cout << "  ";
-        }
-        std:: cout << rt->getID() << std::endl;
-        printEmployeeRecords(rt->m_pRight, level);
+        printEmployeeRecords(rt->m_pLeft);
+        rt->printRecord();
+        printEmployeeRecords(rt->m_pRight);
     }
 }
 
 void EmployeeDatabase::destroyTree(EmployeeRecord *rt) {
-    std::cout << "destroyed" << std::endl;
+    if (rt != NULL) {
+        destroyTree(rt->m_pLeft);
+        destroyTree(rt->m_pRight);
+        delete rt;
+    }
 }
 
 //-----------------------------------------------------

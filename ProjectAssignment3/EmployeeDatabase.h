@@ -16,7 +16,7 @@ class EmployeeDatabase {
 private:
     EmployeeRecord *m_pRoot;
     ifstream inFile;
-    void printEmployeeRecords(EmployeeRecord *rt, int level);
+    void printEmployeeRecords(EmployeeRecord *rt);
     void destroyTree(EmployeeRecord *rt);
     bool getNextLine(char *line, int lineLen);
     bool addEmployee(EmployeeRecord *node, EmployeeRecord *e);

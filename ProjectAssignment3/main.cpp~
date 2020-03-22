@@ -1,0 +1,62 @@
+#include <iostream>
+#include "EmployeeRecord.h"
+#include "CustomerList.h"
+#include "Store.h"
+#include "EmployeeDatabase.h"
+
+int main(){
+
+    CustomerList *p_EmptyCL = new CustomerList;
+
+    char fname1[32] = "James";
+	char lname1[32] = "Abers";
+    EmployeeRecord *er1 = new EmployeeRecord(50, fname1, lname1, 3, 50000.0, p_EmptyCL);
+    //er2.printRecord();
+
+    char fname2[32] = "Paul";
+	char lname2[32] = "Abers";
+    EmployeeRecord *er2 = new EmployeeRecord(30, fname2, lname2, 3, 50000.0, p_EmptyCL);
+    //er2.printRecord();
+
+    char fname3[32] = "Max";
+	char lname3[32] = "Abers";
+    EmployeeRecord *er3 = new EmployeeRecord(20, fname3, lname3, 3, 50000.0, p_EmptyCL);
+    //er2.printRecord();
+
+    char fname4[32] = "Rich";
+	char lname4[32] = "Abers";
+    EmployeeRecord *er4 = new EmployeeRecord(40, fname4, lname4, 3, 50000.0, p_EmptyCL);
+    //er2.printRecord();
+
+    char fname5[32] = "Jazz";
+	char lname5[32] = "Abers";
+    EmployeeRecord *er5 = new EmployeeRecord(70, fname5, lname5, 3, 50000.0, p_EmptyCL);
+    //er2.printRecord();
+
+    char fname6[32] = "Ann";
+	char lname6[32] = "Abers";
+    EmployeeRecord *er6 = new EmployeeRecord(60, fname6, lname6, 3, 50000.0, p_EmptyCL);
+    //er2.printRecord();
+
+
+    EmployeeDatabase *ed = new EmployeeDatabase();
+    ed->addEmployee(er1);
+    ed->addEmployee(er2);
+    ed->addEmployee(er3);
+    ed->addEmployee(er4);
+    ed->addEmployee(er5);
+    ed->addEmployee(er6);
+
+    EmployeeRecord *ret;
+    ret = ed->getEmployee(60);
+    ret->printRecord();
+    ed->printEmployeeRecords();
+    //ret = ed->removeEmployee(50);
+    ret->printRecord();
+    ed->printEmployeeRecords();
+
+    EmployeeRecord *assign;
+
+
+	return 0;
+}

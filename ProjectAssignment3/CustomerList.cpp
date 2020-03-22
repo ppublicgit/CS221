@@ -1,7 +1,7 @@
 /***********************************************
  * File: CustomerList.cpp
  * Author: Paul Abers
- * Assignment 2: Customer List Class
+ * Assignment 3: Customer List Class
  *
  * This program is entirely my own work.
  **********************************************/

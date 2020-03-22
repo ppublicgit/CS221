@@ -1,0 +1,141 @@
+\BOOKMARK [1][-]{section.1}{System Overview}{}% 1
+\BOOKMARK [1][-]{section.2}{Referenced Documents}{}% 2
+\BOOKMARK [1][-]{section.3}{Test Procedures}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Source File: EmployeeRecord.h and EmployeeRecord.cpp}{section.3}% 4
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Function: EmployeeRecord\(\)}{subsection.3.1}% 5
+\BOOKMARK [4][-]{subsubsubsection.3.1.1.1}{Purpose and procedure}{subsubsection.3.1.1}% 6
+\BOOKMARK [4][-]{subsubsubsection.3.1.1.2}{Inputs}{subsubsection.3.1.1}% 7
+\BOOKMARK [4][-]{subsubsubsection.3.1.1.3}{Expected Output}{subsubsection.3.1.1}% 8
+\BOOKMARK [4][-]{subsubsubsection.3.1.1.4}{Success Criteria}{subsubsection.3.1.1}% 9
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Function: \040EmployeeRecord\(\)}{subsection.3.1}% 10
+\BOOKMARK [4][-]{subsubsubsection.3.1.2.1}{Purpose and procedure}{subsubsection.3.1.2}% 11
+\BOOKMARK [4][-]{subsubsubsection.3.1.2.2}{Inputs}{subsubsection.3.1.2}% 12
+\BOOKMARK [4][-]{subsubsubsection.3.1.2.3}{Expected Output}{subsubsection.3.1.2}% 13
+\BOOKMARK [4][-]{subsubsubsection.3.1.2.4}{Success Criteria}{subsubsection.3.1.2}% 14
+\BOOKMARK [3][-]{subsubsection.3.1.3}{Function: getID\(\)}{subsection.3.1}% 15
+\BOOKMARK [4][-]{subsubsubsection.3.1.3.1}{Purpose and procedure}{subsubsection.3.1.3}% 16
+\BOOKMARK [4][-]{subsubsubsection.3.1.3.2}{Inputs}{subsubsection.3.1.3}% 17
+\BOOKMARK [4][-]{subsubsubsection.3.1.3.3}{Expected Output}{subsubsection.3.1.3}% 18
+\BOOKMARK [4][-]{subsubsubsection.3.1.3.4}{Success Criteria}{subsubsection.3.1.3}% 19
+\BOOKMARK [3][-]{subsubsection.3.1.4}{Function: setID\(\)}{subsection.3.1}% 20
+\BOOKMARK [4][-]{subsubsubsection.3.1.4.1}{Purpose and procedure}{subsubsection.3.1.4}% 21
+\BOOKMARK [4][-]{subsubsubsection.3.1.4.2}{Inputs}{subsubsection.3.1.4}% 22
+\BOOKMARK [4][-]{subsubsubsection.3.1.4.3}{Expected Output}{subsubsection.3.1.4}% 23
+\BOOKMARK [4][-]{subsubsubsection.3.1.4.4}{Success Criteria}{subsubsection.3.1.4}% 24
+\BOOKMARK [3][-]{subsubsection.3.1.5}{Function: getName\(\)}{subsection.3.1}% 25
+\BOOKMARK [4][-]{subsubsubsection.3.1.5.1}{Purpose and procedure}{subsubsection.3.1.5}% 26
+\BOOKMARK [4][-]{subsubsubsection.3.1.5.2}{Inputs}{subsubsection.3.1.5}% 27
+\BOOKMARK [4][-]{subsubsubsection.3.1.5.3}{Expected Output}{subsubsection.3.1.5}% 28
+\BOOKMARK [4][-]{subsubsubsection.3.1.5.4}{Success Criteria}{subsubsection.3.1.5}% 29
+\BOOKMARK [3][-]{subsubsection.3.1.6}{Function: setName\(\)}{subsection.3.1}% 30
+\BOOKMARK [4][-]{subsubsubsection.3.1.6.1}{Purpose and procedure}{subsubsection.3.1.6}% 31
+\BOOKMARK [4][-]{subsubsubsection.3.1.6.2}{Inputs}{subsubsection.3.1.6}% 32
+\BOOKMARK [4][-]{subsubsubsection.3.1.6.3}{Expected Output}{subsubsection.3.1.6}% 33
+\BOOKMARK [4][-]{subsubsubsection.3.1.6.4}{Success Criteria}{subsubsection.3.1.6}% 34
+\BOOKMARK [3][-]{subsubsection.3.1.7}{Function: getDept\(\)}{subsection.3.1}% 35
+\BOOKMARK [4][-]{subsubsubsection.3.1.7.1}{Purpose and procedure}{subsubsection.3.1.7}% 36
+\BOOKMARK [4][-]{subsubsubsection.3.1.7.2}{Inputs}{subsubsection.3.1.7}% 37
+\BOOKMARK [4][-]{subsubsubsection.3.1.7.3}{Expected Output}{subsubsection.3.1.7}% 38
+\BOOKMARK [4][-]{subsubsubsection.3.1.7.4}{Success Criteria}{subsubsection.3.1.7}% 39
+\BOOKMARK [3][-]{subsubsection.3.1.8}{Function: setDept\(\)}{subsection.3.1}% 40
+\BOOKMARK [4][-]{subsubsubsection.3.1.8.1}{Purpose and procedure}{subsubsection.3.1.8}% 41
+\BOOKMARK [4][-]{subsubsubsection.3.1.8.2}{Inputs}{subsubsection.3.1.8}% 42
+\BOOKMARK [4][-]{subsubsubsection.3.1.8.3}{Expected Output}{subsubsection.3.1.8}% 43
+\BOOKMARK [4][-]{subsubsubsection.3.1.8.4}{Success Criteria}{subsubsection.3.1.8}% 44
+\BOOKMARK [3][-]{subsubsection.3.1.9}{Function: getSalary\(\)}{subsection.3.1}% 45
+\BOOKMARK [4][-]{subsubsubsection.3.1.9.1}{Purpose and procedure}{subsubsection.3.1.9}% 46
+\BOOKMARK [4][-]{subsubsubsection.3.1.9.2}{Inputs}{subsubsection.3.1.9}% 47
+\BOOKMARK [4][-]{subsubsubsection.3.1.9.3}{Expected Output}{subsubsection.3.1.9}% 48
+\BOOKMARK [4][-]{subsubsubsection.3.1.9.4}{Success Criteria}{subsubsection.3.1.9}% 49
+\BOOKMARK [3][-]{subsubsection.3.1.10}{Function: setSalary\(\)}{subsection.3.1}% 50
+\BOOKMARK [4][-]{subsubsubsection.3.1.10.1}{Purpose and procedure}{subsubsection.3.1.10}% 51
+\BOOKMARK [4][-]{subsubsubsection.3.1.10.2}{Inputs}{subsubsection.3.1.10}% 52
+\BOOKMARK [4][-]{subsubsubsection.3.1.10.3}{Expected Output}{subsubsection.3.1.10}% 53
+\BOOKMARK [4][-]{subsubsubsection.3.1.10.4}{Success Criteria}{subsubsection.3.1.10}% 54
+\BOOKMARK [3][-]{subsubsection.3.1.11}{Function: printRecord\(\)}{subsection.3.1}% 55
+\BOOKMARK [4][-]{subsubsubsection.3.1.11.1}{Purpose and procedure}{subsubsection.3.1.11}% 56
+\BOOKMARK [4][-]{subsubsubsection.3.1.11.2}{Inputs}{subsubsection.3.1.11}% 57
+\BOOKMARK [4][-]{subsubsubsection.3.1.11.3}{Expected Output}{subsubsection.3.1.11}% 58
+\BOOKMARK [4][-]{subsubsubsection.3.1.11.4}{Success Criteria}{subsubsection.3.1.11}% 59
+\BOOKMARK [3][-]{subsubsection.3.1.12}{Function: removeCustomerList\(\)}{subsection.3.1}% 60
+\BOOKMARK [4][-]{subsubsubsection.3.1.12.1}{Purpose and procedure}{subsubsection.3.1.12}% 61
+\BOOKMARK [4][-]{subsubsubsection.3.1.12.2}{Inputs}{subsubsection.3.1.12}% 62
+\BOOKMARK [4][-]{subsubsubsection.3.1.12.3}{Expected Output}{subsubsection.3.1.12}% 63
+\BOOKMARK [4][-]{subsubsubsection.3.1.12.4}{Success Criteria}{subsubsection.3.1.12}% 64
+\BOOKMARK [3][-]{subsubsection.3.1.13}{Function: destroyCustomerList\(\)}{subsection.3.1}% 65
+\BOOKMARK [4][-]{subsubsubsection.3.1.13.1}{Purpose and procedure}{subsubsection.3.1.13}% 66
+\BOOKMARK [4][-]{subsubsubsection.3.1.13.2}{Inputs}{subsubsection.3.1.13}% 67
+\BOOKMARK [4][-]{subsubsubsection.3.1.13.3}{Expected Output}{subsubsection.3.1.13}% 68
+\BOOKMARK [4][-]{subsubsubsection.3.1.13.4}{Success Criteria}{subsubsection.3.1.13}% 69
+\BOOKMARK [2][-]{subsection.3.2}{Source File: CustomerList.h and CustomerList.cpp}{section.3}% 70
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Function: CustomerList\(\)}{subsection.3.2}% 71
+\BOOKMARK [4][-]{subsubsubsection.3.2.1.1}{Purpose and procedure}{subsubsection.3.2.1}% 72
+\BOOKMARK [4][-]{subsubsubsection.3.2.1.2}{Inputs}{subsubsection.3.2.1}% 73
+\BOOKMARK [4][-]{subsubsubsection.3.2.1.3}{Expected Output}{subsubsection.3.2.1}% 74
+\BOOKMARK [4][-]{subsubsubsection.3.2.1.4}{Success Criteria}{subsubsection.3.2.1}% 75
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Function: \176CustomerList\(\)}{subsection.3.2}% 76
+\BOOKMARK [4][-]{subsubsubsection.3.2.2.1}{Purpose and procedure}{subsubsection.3.2.2}% 77
+\BOOKMARK [4][-]{subsubsubsection.3.2.2.2}{Inputs}{subsubsection.3.2.2}% 78
+\BOOKMARK [4][-]{subsubsubsection.3.2.2.3}{Expected Output}{subsubsection.3.2.2}% 79
+\BOOKMARK [4][-]{subsubsubsection.3.2.2.4}{Success Criteria}{subsubsection.3.2.2}% 80
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Function: addStore\(\)}{subsection.3.2}% 81
+\BOOKMARK [4][-]{subsubsubsection.3.2.3.1}{Purpose and procedure}{subsubsection.3.2.3}% 82
+\BOOKMARK [4][-]{subsubsubsection.3.2.3.2}{Inputs}{subsubsection.3.2.3}% 83
+\BOOKMARK [4][-]{subsubsubsection.3.2.3.3}{Expected Output}{subsubsection.3.2.3}% 84
+\BOOKMARK [4][-]{subsubsubsection.3.2.3.4}{Success Criteria}{subsubsection.3.2.3}% 85
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Function: removeStore\(\)}{subsection.3.2}% 86
+\BOOKMARK [4][-]{subsubsubsection.3.2.4.1}{Purpose and procedure}{subsubsection.3.2.4}% 87
+\BOOKMARK [4][-]{subsubsubsection.3.2.4.2}{Inputs}{subsubsection.3.2.4}% 88
+\BOOKMARK [4][-]{subsubsubsection.3.2.4.3}{Expected Output}{subsubsection.3.2.4}% 89
+\BOOKMARK [4][-]{subsubsubsection.3.2.4.4}{Success Criteria}{subsubsection.3.2.4}% 90
+\BOOKMARK [3][-]{subsubsection.3.2.5}{Function: getStore\(\)}{subsection.3.2}% 91
+\BOOKMARK [4][-]{subsubsubsection.3.2.5.1}{Purpose and procedure}{subsubsection.3.2.5}% 92
+\BOOKMARK [4][-]{subsubsubsection.3.2.5.2}{Inputs}{subsubsection.3.2.5}% 93
+\BOOKMARK [4][-]{subsubsubsection.3.2.5.3}{Expected Output}{subsubsection.3.2.5}% 94
+\BOOKMARK [4][-]{subsubsubsection.3.2.5.4}{Success Criteria}{subsubsection.3.2.5}% 95
+\BOOKMARK [3][-]{subsubsection.3.2.6}{Function: updateStore\(\)}{subsection.3.2}% 96
+\BOOKMARK [4][-]{subsubsubsection.3.2.6.1}{Purpose and procedure}{subsubsection.3.2.6}% 97
+\BOOKMARK [4][-]{subsubsubsection.3.2.6.2}{Inputs}{subsubsection.3.2.6}% 98
+\BOOKMARK [4][-]{subsubsubsection.3.2.6.3}{Expected Output}{subsubsection.3.2.6}% 99
+\BOOKMARK [4][-]{subsubsubsection.3.2.6.4}{Success Criteria}{subsubsection.3.2.6}% 100
+\BOOKMARK [3][-]{subsubsection.3.2.7}{Function: printStoresInfo\(\)}{subsection.3.2}% 101
+\BOOKMARK [4][-]{subsubsubsection.3.2.7.1}{Purpose and procedure}{subsubsection.3.2.7}% 102
+\BOOKMARK [4][-]{subsubsubsection.3.2.7.2}{Inputs}{subsubsection.3.2.7}% 103
+\BOOKMARK [4][-]{subsubsubsection.3.2.7.3}{Expected Output}{subsubsection.3.2.7}% 104
+\BOOKMARK [4][-]{subsubsubsection.3.2.7.4}{Success Criteria}{subsubsection.3.2.7}% 105
+\BOOKMARK [2][-]{subsection.3.3}{Source File: EmployeeDatabase.h and EmployeeDatabase.cpp}{section.3}% 106
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Function: EmployeeDatabase\(\)}{subsection.3.3}% 107
+\BOOKMARK [4][-]{subsubsubsection.3.3.1.1}{Purpose and procedure}{subsubsection.3.3.1}% 108
+\BOOKMARK [4][-]{subsubsubsection.3.3.1.2}{Inputs}{subsubsection.3.3.1}% 109
+\BOOKMARK [4][-]{subsubsubsection.3.3.1.3}{Expected Output}{subsubsection.3.3.1}% 110
+\BOOKMARK [4][-]{subsubsubsection.3.3.1.4}{Success Criteria}{subsubsection.3.3.1}% 111
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Function: \176EmployeeDatabase\(\)}{subsection.3.3}% 112
+\BOOKMARK [4][-]{subsubsubsection.3.3.2.1}{Purpose and procedure}{subsubsection.3.3.2}% 113
+\BOOKMARK [4][-]{subsubsubsection.3.3.2.2}{Inputs}{subsubsection.3.3.2}% 114
+\BOOKMARK [4][-]{subsubsubsection.3.3.2.3}{Expected Output}{subsubsection.3.3.2}% 115
+\BOOKMARK [4][-]{subsubsubsection.3.3.2.4}{Success Criteria}{subsubsection.3.3.2}% 116
+\BOOKMARK [3][-]{subsubsection.3.3.3}{Function: addEmployee\(\)}{subsection.3.3}% 117
+\BOOKMARK [4][-]{subsubsubsection.3.3.3.1}{Purpose and procedure}{subsubsection.3.3.3}% 118
+\BOOKMARK [4][-]{subsubsubsection.3.3.3.2}{Inputs}{subsubsection.3.3.3}% 119
+\BOOKMARK [4][-]{subsubsubsection.3.3.3.3}{Expected Output}{subsubsection.3.3.3}% 120
+\BOOKMARK [4][-]{subsubsubsection.3.3.3.4}{Success Criteria}{subsubsection.3.3.3}% 121
+\BOOKMARK [3][-]{subsubsection.3.3.4}{Function: getEmployee\(\)}{subsection.3.3}% 122
+\BOOKMARK [4][-]{subsubsubsection.3.3.4.1}{Purpose and procedure}{subsubsection.3.3.4}% 123
+\BOOKMARK [4][-]{subsubsubsection.3.3.4.2}{Inputs}{subsubsection.3.3.4}% 124
+\BOOKMARK [4][-]{subsubsubsection.3.3.4.3}{Expected Output}{subsubsection.3.3.4}% 125
+\BOOKMARK [4][-]{subsubsubsection.3.3.4.4}{Success Criteria}{subsubsection.3.3.4}% 126
+\BOOKMARK [3][-]{subsubsection.3.3.5}{Function: removeEmployee\(\)}{subsection.3.3}% 127
+\BOOKMARK [4][-]{subsubsubsection.3.3.5.1}{Purpose and procedure}{subsubsection.3.3.5}% 128
+\BOOKMARK [4][-]{subsubsubsection.3.3.5.2}{Inputs}{subsubsection.3.3.5}% 129
+\BOOKMARK [4][-]{subsubsubsection.3.3.5.3}{Expected Output}{subsubsection.3.3.5}% 130
+\BOOKMARK [4][-]{subsubsubsection.3.3.5.4}{Success Criteria}{subsubsection.3.3.5}% 131
+\BOOKMARK [3][-]{subsubsection.3.3.6}{Function: printEmployeeRecords\(\)}{subsection.3.3}% 132
+\BOOKMARK [4][-]{subsubsubsection.3.3.6.1}{Purpose and procedure}{subsubsection.3.3.6}% 133
+\BOOKMARK [4][-]{subsubsubsection.3.3.6.2}{Inputs}{subsubsection.3.3.6}% 134
+\BOOKMARK [4][-]{subsubsubsection.3.3.6.3}{Expected Output}{subsubsection.3.3.6}% 135
+\BOOKMARK [4][-]{subsubsubsection.3.3.6.4}{Success Criteria}{subsubsection.3.3.6}% 136
+\BOOKMARK [3][-]{subsubsection.3.3.7}{Function: buildDatabase\(\)}{subsection.3.3}% 137
+\BOOKMARK [4][-]{subsubsubsection.3.3.7.1}{Purpose and procedure}{subsubsection.3.3.7}% 138
+\BOOKMARK [4][-]{subsubsubsection.3.3.7.2}{Inputs}{subsubsection.3.3.7}% 139
+\BOOKMARK [4][-]{subsubsubsection.3.3.7.3}{Expected Output}{subsubsection.3.3.7}% 140
+\BOOKMARK [4][-]{subsubsubsection.3.3.7.4}{Success Criteria}{subsubsection.3.3.7}% 141

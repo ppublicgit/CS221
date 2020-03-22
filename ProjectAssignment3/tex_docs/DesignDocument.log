@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.2.7)  21 FEB 2020 20:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.2.7)  16 MAR 2020 20:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -201,101 +201,125 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.34 ...5.1}Purpose}{10}{subsubsubsection.4.1.5.1}
-                                                  % [1] [2] [3])
+l.34 ...5.1}Purpose}{12}{subsubsubsection.4.1.5.1}
+                                                  % [1] [2] [3] [4] [5])
 \tf@toc=\write4
 \openout4 = `DesignDocument.toc'.
 
- [4]
-Underfull \hbox (badness 10000) in paragraph at lines 109--115
+
+[6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 112--118
 
  []
 
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-16.
+19.
 (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 116.
- [5]
-Underfull \hbox (badness 10000) in paragraph at lines 139--143
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 119.
+ [8]
+Overfull \hbox (8.61253pt too wide) in paragraph at lines 144--145
+[]\OT1/cmr/m/n/12 destroyCustomerList() -- deletes the cus-tomer list ob-jects 
+and sets pointer
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--150
 
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 171--175
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 178--182
 
  []
 
-[7] [8] [9]
-Overfull \hbox (301.60034pt too wide) in paragraph at lines 240--240
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--200
+
+ []
+
+[10] [11] [12]
+Overfull \hbox (301.60034pt too wide) in paragraph at lines 270--270
 []\OT1/cmtt/m/n/12 Properly destruct the class. Clean up and deallocate memory 
 initialized for pointers for the first and last name[] 
  []
 
-[10]
-Overfull \hbox (36.07521pt too wide) in paragraph at lines 269--269
+[13]
+Overfull \hbox (36.07521pt too wide) in paragraph at lines 299--299
 []\OT1/cmtt/m/n/12 Set internal member variable for employee id to passed integ
 er value.[] 
  []
 
-
-Overfull \hbox (171.92528pt too wide) in paragraph at lines 286--286
+[14]
+Overfull \hbox (171.92528pt too wide) in paragraph at lines 316--316
 []\OT1/cmtt/m/n/12 Copy contents of internal member variable character arrays f
 or first and last name into the[] 
  []
 
-[11] [12]
-Overfull \hbox (23.7252pt too wide) in paragraph at lines 331--331
+[15]
+Overfull \hbox (23.7252pt too wide) in paragraph at lines 361--361
 []\OT1/cmtt/m/n/12 Set internal value for department id equal to the passed int
  value.[] 
  []
 
-[13]
-Overfull \hbox (23.7252pt too wide) in paragraph at lines 360--360
+[16] [17]
+Overfull \hbox (23.7252pt too wide) in paragraph at lines 390--390
 []\OT1/cmtt/m/n/12 Set member variable for salary equal to the passed double va
 riable.[] 
  []
 
-[14]
-Overfull \hbox (3.30122pt too wide) in paragraph at lines 384--384
+[18] [19]
+Overfull \hbox (3.30122pt too wide) in paragraph at lines 449--449
 |[]\OT1/cmr/bx/n/14.4 Source File: Cus-tomerList.h and Cus-tomerList.cpp| 
  []
 
-[15] [16]
-Overfull \hbox (23.7252pt too wide) in paragraph at lines 442--442
+[20] [21]
+Overfull \hbox (23.7252pt too wide) in paragraph at lines 507--507
 []            \OT1/cmtt/m/n/12 set input store next pointer equal to curr next 
 pointer[] 
  []
 
-[17] [18] [19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 544.
- [20]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 544.
+[22] [23] [24] [25] [26] [27] [28] [29] [30] [31]
+Overfull \hbox (5.2002pt too wide) in paragraph at lines 816--816
+[]        \OT1/cmtt/m/n/12 predecessor equals getPredecessor(temp, temp left ch
+ild)[] 
+ []
+
+
+Overfull \hbox (5.2002pt too wide) in paragraph at lines 816--816
+[]        \OT1/cmtt/m/n/12 predecessor equals getPredecessor(temp, temp left ch
+ild)[] 
+ []
+
+[32] [33] [34]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 905.
+ [35]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 905.
  (./DesignDocument.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 544.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 544.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 905.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 905.
 Package rerunfilecheck Info: File `DesignDocument.out' has not changed.
-(rerunfilecheck)             Checksum: 22C8D5ECF03324D25ED802AC2076BE16;10223.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 544.
+(rerunfilecheck)             Checksum: 50CC5DD2F68D8BFDC37240F359E412D3;18646.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 905.
  ) 
 Here is how much of TeX's memory you used:
- 4841 strings out of 492167
- 73702 string characters out of 6131559
- 166458 words of memory out of 5000000
- 9073 multiletter control sequences out of 15000+600000
+ 5050 strings out of 492167
+ 78561 string characters out of 6131559
+ 167458 words of memory out of 5000000
+ 9170 multiletter control sequences out of 15000+600000
  8669 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,5n,31p,202b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,5n,31p,299b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmtt12.pfb>
-Output written on DesignDocument.pdf (21 pages, 84410 bytes).
+Output written on DesignDocument.pdf (36 pages, 107446 bytes).
 PDF statistics:
- 763 PDF objects out of 1000 (max. 8388607)
- 728 compressed objects within 8 object streams
- 144 named destinations out of 1000 (max. 500000)
- 985 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1340 PDF objects out of 1440 (max. 8388607)
+ 1285 compressed objects within 13 object streams
+ 256 named destinations out of 1000 (max. 500000)
+ 1761 words of extra memory for PDF output out of 10000 (max. 10000000)
 

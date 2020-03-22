@@ -75,7 +75,11 @@ int main(){
 	bool retUpdateSuccess = cl->updateStore(8, name, addr, city, stat, zipc);
 	if (retUpdateSuccess) {cl->printStoresInfo();}
 
-	EmployeeRecord er2(2, fname2, lname2, 3, 50000.0, cl);
+	EmployeeRecord *er2 = new EmployeeRecord(2, fname2, lname2, 3, 50000.0, cl);
+	CustomerList *cl2 = er2->getCustomerList();
+	std::cout << "reutrned customer list" << std::endl;
+	cl2->printStoresInfo();
+	delete er2;
 
 	return 0;
 }

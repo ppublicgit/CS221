@@ -37,31 +37,31 @@
 \begin{document}
 
 \begin{titlepage}
-	\clearpage\thispagestyle{empty}
-	\centering
-	\vspace{2cm}
+    \clearpage\thispagestyle{empty}
+    \centering
+    \vspace{2cm}
 
-	% Titles
-	%{\large  \par}
-	%\vspace{4cm}
-	{\Huge \textbf{Software Design Document \\
+    % Titles
+    %{\large  \par}
+    %\vspace{4cm}
+    {\Huge \textbf{Software Design Document \\
         for \\
-        Employee Record Database with Customer List}} \\
-	\vspace{1cm}
-	{\large \textbf{Programming Assignment 2 \\
-      February 20, 2020} \par}
-	\vspace{4cm}
-	{\normalsize Prepared By \\ % \\ specifies a new line
+        Employee Record, Store, and Customer Database}} \\
+    \vspace{1cm}
+    {\large \textbf{Programming Assignment 3 \\
+      March 16, 2020} \par}
+    \vspace{4cm}
+    {\normalsize Prepared By \\ % \\ specifies a new line
       Paul Abers \\
       pa0034@uah.edu \par}
-	\vspace{2cm}
+    \vspace{2cm}
 
     \vspace{2cm}
 
-	% Information about the University
-	{\normalsize Prepared For \\
-		Mr. James Williamson \\
-		CS 221, Data Structures in C++ \\
+    % Information about the University
+    {\normalsize Prepared For \\
+        Mr. James Williamson \\
+        CS 221, Data Structures in C++ \\
         Computer Science Department \\
         University of Alabama in Huntsville \par}
 
@@ -75,23 +75,25 @@
 
 \section{System Overview}
 The purpose of this assignment is to provide a simple and easy way
-to access an employee record database. The database has three parts,
-the employee record class, a store class and a customer list class.
+to access an employee record database. The database has four parts,
+the employee record class, a store class, a customer list class and
+an employee record database.
 The employee record class must store an employee ID,
 employee name, department, annual salary of each employee and a customer
 list class. The customer list class stores a list of store classes. The store
-class stores information on a single customer store.
+class stores information on a single customer store. The employee database will
+use a binary tree to store employee records.
 
 \section{Referenced Documents}
 Programming Assignment 1 Statement of Work. \\
-Programming Assignment 2 Statement of Work.
+Programming Assignment 2 Statement of Work. \\
+Programming Assignment 3 Statement of Work.
 
 \section{Architectural Design}
 \subsection{Concept of Execution}
 This program creates a class structure to store information for an
-individual employee, a store and a list of stores. The employee class stores an
-employee's first and last name, a unique employee ID, the employee's department ID, the employee's salary,
-and a list of customer stores for the employee. The customer list class stores a list of customer stores.
+individual employee, a store, a list of stores and a binary search tree of employee records.
+The employee class stores an employee's first and last name, a unique employee ID, the employee's department ID, the employee's salary, a pointer to a left and right child, and a list of customer stores for the employee. The customer list class stores a list of customer stores.
 
 A database manager will have access to public get and set methods of the class
 in order to set the various attributes for the employee as well as get them later.
@@ -101,13 +103,14 @@ that handles all inputs being included. A quick and easy print will also be prov
 displaying all attributes of the class.
 The customer list class will have functions
 for adding a store, removing a store, getting a store based on store id and printing a store info.
+The employee database will have a pointer to the root of the tree and a pointer to an ifstream object.
 
 \subsection{Abstract Data Type}
-The employee record structure is implemented with a class structure separated in a cpp and header file.
+The employee record structure is implemented with a class structure separated in a cpp and header file. Likewise for the store class. The customer list is a linked list of store object. The employee database is a binary search tree.
 
 \subsection{Code Outline}
 This program will consist of the following files: EmployeeRecord.h, EmployeeRecord.cpp, Store.h, Store.cpp,
-CustomerList.h and CustomerList.cpp.
+CustomerList.h, CustomerList.cpp, EmployeeDatabase.h and EmployeeDatabase.cpp.
 \hfill\\
 \hfill\\
 EmployeeRecord Class
@@ -119,6 +122,8 @@ EmployeeRecord Class
     \item m\_iDeptId -- int for department id
     \item m\_dSalary -- double for employee's salary
     \item m\_pCustomerList -- pointer to customer list object
+    \item m\_pLeft -- pointer to left child
+    \item m\_pRight -- pointer to right child
     \end{itemize}
     \hfill\\
 \underline{Public Methods}:
@@ -135,6 +140,8 @@ EmployeeRecord Class
     \item setSalary() -- set employee's salary
     \item printRecord() -- prints to screen all data for employee's record
     \item getCustomerList() -- return the pointer to the employee record's customer list object
+    \item removeCustomerList() -- set pointer to customer list to Null
+    \item destroyCustomerList() -- deletes the customer list objects and sets pointer to null
 \end{itemize}
 \hfill\\
 \hfill\\
@@ -185,6 +192,25 @@ CustomerList Class
     \item getStore() -- access a store from list
     \item updateStore() -- update a store in list
     \item printStoresInfo() -- print info for each store in list
+    \end{itemize}
+\hfill\\
+\hfill\\
+EmployeeDatabase Class
+\underline{Private Attributes}:
+\begin{itemize}
+    \item m\_pRoot -- pointer to root employee record object
+    \item inFile -- ifstream object
+    \end{itemize}
+    \hfill\\
+\underline{Public Methods}:
+\begin{itemize}
+    \item EmployeeDatabase() -- constructor for employee database
+    \item ~EmployeeDatabase() -- destructor for employee database
+    \item addEmployee() -- add a employee to tree
+    \item removeEmployee() -- remove an employee from tree
+    \item getEmployee() -- access an employee from tree
+    \item printEmployeeRecords -- print employee records of tree
+    \item buildDatabase -- build database from an input file
 \end{itemize}
 
 \section{Detailed Design}
@@ -203,6 +229,8 @@ set last name to ""
 set first name to ""
 set department id to 0
 set salary to 0.0
+set left child to null
+set right child to null
 \end{verbatim}
 \subsubsubsection{Tracability}
 This function will fulfil requirement 2.2.2.1 of SOW
@@ -222,6 +250,8 @@ copy passed character array for lName into m_sLastName
 copy passed character array for fName into m_sFirstName
 set department id to dept
 set salary to sal.
+set left child to null
+set right child to null
 \end{verbatim}
 \subsubsubsection{Tracability}
 This function will fulfil requirement 2.2.2.2 of SOW
@@ -236,7 +266,7 @@ None
 \subsubsubsection{Function Outline in Pseudocode}
 \begin{verbatim}
 Properly destruct the class. Clean up and deallocate memory initialized for pointers for the first and last name
-character arrays.
+character arrays. Properly destruct customer list.
 \end{verbatim}
 \subsubsubsection{Tracability}
 This function will fulfil requirement 2.2.2.3 of SOW
@@ -380,6 +410,41 @@ return
 \end{verbatim}
 \subsubsubsection{Tracability}
 This function will fulfil requirement 2.2.2.8 of SOW
+
+\subsubsection{Function:  removeCustomerList()}
+\subsubsubsection{Purpose}
+This function removes the customer list from employee record and sets pointer to null
+\subsubsubsection{Arguments}
+None
+\subsubsubsection{Return Value}
+void
+\subsubsubsection{Function Outline in Pseudocode}
+\begin{verbatim}
+check if pointer to customer is null
+if not null
+    set pointer to customer list to null
+return
+\end{verbatim}
+\subsubsubsection{Tracability}
+This function will fulfil requirement 2.2.2 of SOW 3
+
+\subsubsection{Function:  destroyCustomerList()}
+\subsubsubsection{Purpose}
+This function deletes the customer list from employee record and sets pointer to null
+\subsubsubsection{Arguments}
+None
+\subsubsubsection{Return Value}
+void
+\subsubsubsection{Function Outline in Pseudocode}
+\begin{verbatim}
+check if pointer to customer is null
+if not null
+    destroy the customer object
+    set pointer to customer list to null
+return
+\end{verbatim}
+\subsubsubsection{Tracability}
+This function will fulfil requirement 2.2.2 of SOW 3
 
 \subsection{Source File: CustomerList.h and CustomerList.cpp}
 \subsubsection{Function: CustomerList()}
@@ -540,6 +605,302 @@ return
 \end{verbatim}
 \subsubsubsection{Tracability}
 This function will fulfil requirement 2.0.4.2.5 of SOW2
+
+\subsection{Source File: EmployeeDatabase.h and EmployeeDatabase.cpp}
+\subsubsection{Function: EmployeeDatabase()}
+\subsubsubsection{Purpose}
+This is the default constructor for the EmployeeDatabase class.
+\subsubsubsection{Arguments}
+This default constructor takes no arguments.
+\subsubsubsection{Return Value}
+A constructor, therefore no value is returned.
+\subsubsubsection{Function Outline in Pseudocode}
+\begin{verbatim}
+Set m_pRoot to NULL
+set inFile to NULL
+\end{verbatim}
+\subsubsubsection{Tracability}
+This function will fulfil requirement 2.3.2.1 of SOW 3
+
+\subsubsection{Function: \textasciitilde EmployeeDatabase()}
+\subsubsubsection{Purpose}
+This is the default destructor for the EmployeeDatabase class.
+\subsubsubsection{Arguments}
+This default destructor takes no arguments.
+\subsubsubsection{Return Value}
+A destructor, therefore no value is returned.
+\subsubsubsection{Function Outline in Pseudocode}
+\begin{verbatim}
+If root is not null
+    next left is root left child
+    next right is root right child
+    delete(next left)
+    delete(next right)
+delete(root)
+return
+\end{verbatim}
+\subsubsubsection{Tracability}
+This function will fulfil requirement 2.3.2.1 of SOW 3
+
+\subsubsection{Function: addEmployee()}
+\subsubsubsection{Purpose}
+Add an employee to the EmployeeDatabase tree.
+\subsubsubsection{Arguments}
+pointer to an EmployeeRecord object
+\subsubsubsection{Return Value}
+bool for success of insertion
+\subsubsubsection{Function Outline in Pseudocode}
+\begin{verbatim}
+if root is null
+    root equals employee record
+else
+    addEmployeeHelp(root, employeerecord)
+return true
+\end{verbatim}
+\subsubsubsection{Tracability}
+This function will partially fulfil requirement 2.3.2.2 of SOW 3
+
+\subsubsection{Function: addEmployeeHelp()}
+\subsubsubsection{Purpose}
+Add an employee to the EmployeeDatabase tree.
+\subsubsubsection{Arguments}
+pointer to current node, pointer to an EmployeeRecord object
+\subsubsubsection{Return Value}
+void
+\subsubsubsection{Function Outline in Pseudocode}
+\begin{verbatim}
+if node employee record is greater than employee record id
+    if node left child is null
+        node left child equals employee record
+    else
+        addEmployeeHelp(node left child, employee record)
+elif node employee record is less than employee record id
+    if node right child is null
+        node right child equals employee record
+    else
+        addEmployeeHelp(node right child, employee record)
+else
+    return false
+return true
+\end{verbatim}
+\subsubsubsection{Tracability}
+This function will partially fulfil requirement 2.3.2.2 of SOW 3
+
+\subsubsection{Function: getEmployee()}
+\subsubsubsection{Purpose}
+get an employee from the EmployeeDatabase tree.
+\subsubsubsection{Arguments}
+integer id of employee to get
+\subsubsubsection{Return Value}
+pointer to employee record object found
+\subsubsubsection{Function Outline in Pseudocode}
+\begin{verbatim}
+return getEmployeeHelp(root, id)
+\end{verbatim}
+\subsubsubsection{Tracability}
+This function will partially fulfil requirement 2.3.2.3 of SOW 3
+
+\subsubsection{Function: getEmployeeHelp()}
+\subsubsubsection{Purpose}
+get an employee from the EmployeeDatabase tree helper function.
+\subsubsubsection{Arguments}
+current node to search at, integer id of employee to get
+\subsubsubsection{Return Value}
+pointer to employee record object found
+\subsubsubsection{Function Outline in Pseudocode}
+\begin{verbatim}
+if node is null
+    return null
+elif node id equals id
+    return node
+elif node employee record id is greater than  id
+    return getEmployeeHelp(node left child, id)
+elif node employee record id is less than id
+    return getEmployeeHelp(node right child, id)
+else
+    return null
+\end{verbatim}
+\subsubsubsection{Tracability}
+This function will partially fulfil requirement 2.3.2.3 of SOW 3
+
+\subsubsection{Function: removeEmployee()}
+\subsubsubsection{Purpose}
+remove an employee from the EmployeeDatabase tree.
+\subsubsubsection{Arguments}
+integer id of employee to remove
+\subsubsubsection{Return Value}
+pointer to employee record object removed
+\subsubsubsection{Function Outline in Pseudocode}
+\begin{verbatim}
+if root is null
+    return null
+elif root id equals id
+    if root left child and root right child are null
+        temp equals root
+        root equals null
+        return temp
+    elif root left child is null
+        temp equals root
+        root equals root right child
+        return temp
+    elif root right child is null
+        temp equals root
+        root equals root left child
+        return temp
+else
+    return removeEmployeeHelp(root, id)
+\end{verbatim}
+\subsubsubsection{Tracability}
+This function will partially fulfil requirement 2.3.2.3 of SOW 3
+
+\subsubsection{Function: removeEmployeeHelp()}
+\subsubsubsection{Purpose}
+remove an employee from the EmployeeDatabase helper function.
+\subsubsubsection{Arguments}
+node to check at, integer id of employee to remove
+\subsubsubsection{Return Value}
+pointer to employee record removed
+\subsubsubsection{Function Outline in Pseudocode}
+\begin{verbatim}
+if node id is greater than id
+    if node left child id equals id
+        return handleRemoveEmployee(node, id)
+    elif node left child is null
+        return null
+    else
+        return removeEmployeeHelp(node left child)
+if node id is less than id
+    if node right child id equals id
+        return handleRemoveEmployee(node, id)
+    elif node right child is null
+        return null
+    else
+        return removeEmployeeHelp(node left child)
+
+\end{verbatim}
+\subsubsubsection{Tracability}
+This function will partially fulfil requirement 2.3.2.4 of SOW 3
+
+\subsubsection{Function: handleRemoveEmployee()}
+\subsubsubsection{Purpose}
+remove an employee from the EmployeeDatabase handle function.
+\subsubsubsection{Arguments}
+node to remove
+\subsubsubsection{Return Value}
+pointer to employee record removed
+\subsubsubsection{Function Outline in Pseudocode}
+\begin{verbatim}
+if node left child id equals id
+    temp equals node left child
+    if temp left child and right child are null
+        node left child equals temp left child
+    elif temp left child is null
+        node left child equals temp right child
+    elif temp right child is null
+        node left child equals temp left child
+    else
+        predecessor equals getPredecessor(temp, temp left child)
+        node left child equals predecessor
+else
+    temp equals node right child
+    if temp left child and right child are null
+        node right child equals temp right child
+    elif temp left child is null
+        node right child equals temp right child
+    elif temp right child is null
+        node right child equals temp left child
+    else
+        predecessor equals getPredecessor(temp, temp left child)
+        node right child equals predecessor
+return temp
+\end{verbatim}
+\subsubsubsection{Tracability}
+This function will partially fulfil requirement 2.3.2.4 of SOW 3
+
+\subsubsection{Function: getPredecessor()}
+\subsubsubsection{Purpose}
+get predecessor for node to remove
+\subsubsubsection{Arguments}
+node to remove, node to remove traverser
+\subsubsubsection{Return Value}
+pointer to employee record predecessor
+\subsubsubsection{Function Outline in Pseudocode}
+\begin{verbatim}
+if node traverser right child is not null
+    return getpredecessor(node, node traverser right child)
+else
+    if node traverser left child is not null
+        node right child equals node traverser left child
+    return node traverser
+\end{verbatim}
+\subsubsubsection{Tracability}
+This function will partially fulfil requirement 2.3.2.4 of SOW 3
+
+\subsubsection{Function: printEmployeeRecords()}
+\subsubsubsection{Purpose}
+print employee records database public function
+\subsubsubsection{Arguments}
+no arguments
+\subsubsubsection{Return Value}
+void
+\subsubsubsection{Function Outline in Pseudocode}
+\begin{verbatim}
+    printEmployeeRecords(root)
+\end{verbatim}
+\subsubsubsection{Tracability}
+This function will fulfil requirement 2.3.2.5 of SOW 3
+
+\subsubsection{Function: printEmployeeRecords()}
+\subsubsubsection{Purpose}
+print employee records database private function
+\subsubsubsection{Arguments}
+node to print
+\subsubsubsection{Return Value}
+void
+\subsubsubsection{Function Outline in Pseudocode}
+\begin{verbatim}
+if node is null
+    return
+printEmployeeRecords(node left child)
+node.printEmployeeRecord()
+printEmployeeRecords(node right child)
+return
+\end{verbatim}
+\subsubsubsection{Tracability}
+This function will fulfil requirement 2.3.3.1 of SOW 3
+
+\subsubsection{Function: buildDatabase()}
+\subsubsubsection{Purpose}
+build database
+\subsubsubsection{Arguments}
+character array for input data file
+\subsubsubsection{Return Value}
+bool for success of build
+\subsubsubsection{Function Outline in Pseudocode}
+\begin{verbatim}
+Code is provided
+\end{verbatim}
+\subsubsubsection{Tracability}
+This function will fulfil requirement 2.3.2.6 of SOW 3
+
+\subsubsection{Function: destroyTree()}
+\subsubsubsection{Purpose}
+recursively traverse the tree and delete all nodes
+\subsubsubsection{Arguments}
+root of tree
+\subsubsubsection{Return Value}
+void
+\subsubsubsection{Function Outline in Pseudocode}
+\begin{verbatim}
+if node is null
+    return
+destroyTree(node left child)
+destroyTree(node right child)
+delete node
+return
+\end{verbatim}
+\subsubsubsection{Tracability}
+This function will partially fulfil requirement 2.3.3.2 of SOW 3
 
 \end{document}
 %%% Local Variables:

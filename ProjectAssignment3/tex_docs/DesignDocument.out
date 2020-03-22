@@ -1,0 +1,220 @@
+\BOOKMARK [1][-]{section.1}{System Overview}{}% 1
+\BOOKMARK [1][-]{section.2}{Referenced Documents}{}% 2
+\BOOKMARK [1][-]{section.3}{Architectural Design}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Concept of Execution}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Abstract Data Type}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Code Outline}{section.3}% 6
+\BOOKMARK [1][-]{section.4}{Detailed Design}{}% 7
+\BOOKMARK [2][-]{subsection.4.1}{Source File: EmployeeRecord.h and EmployeeRecord.cpp}{section.4}% 8
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Function: EmployeeRecord\(\)}{subsection.4.1}% 9
+\BOOKMARK [4][-]{subsubsubsection.4.1.1.1}{Purpose}{subsubsection.4.1.1}% 10
+\BOOKMARK [4][-]{subsubsubsection.4.1.1.2}{Arguments}{subsubsection.4.1.1}% 11
+\BOOKMARK [4][-]{subsubsubsection.4.1.1.3}{Return Value}{subsubsection.4.1.1}% 12
+\BOOKMARK [4][-]{subsubsubsection.4.1.1.4}{Function Outline in Pseudocode}{subsubsection.4.1.1}% 13
+\BOOKMARK [4][-]{subsubsubsection.4.1.1.5}{Tracability}{subsubsection.4.1.1}% 14
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Function: EmplyoeeRecord\(\)}{subsection.4.1}% 15
+\BOOKMARK [4][-]{subsubsubsection.4.1.2.1}{Purpose}{subsubsection.4.1.2}% 16
+\BOOKMARK [4][-]{subsubsubsection.4.1.2.2}{Arguments}{subsubsection.4.1.2}% 17
+\BOOKMARK [4][-]{subsubsubsection.4.1.2.3}{Return Value}{subsubsection.4.1.2}% 18
+\BOOKMARK [4][-]{subsubsubsection.4.1.2.4}{Function Outline in Pseudocode}{subsubsection.4.1.2}% 19
+\BOOKMARK [4][-]{subsubsubsection.4.1.2.5}{Tracability}{subsubsection.4.1.2}% 20
+\BOOKMARK [3][-]{subsubsection.4.1.3}{Function: \176EmplyoeeRecord\(\)}{subsection.4.1}% 21
+\BOOKMARK [4][-]{subsubsubsection.4.1.3.1}{Purpose}{subsubsection.4.1.3}% 22
+\BOOKMARK [4][-]{subsubsubsection.4.1.3.2}{Arguments}{subsubsection.4.1.3}% 23
+\BOOKMARK [4][-]{subsubsubsection.4.1.3.3}{Return Value}{subsubsection.4.1.3}% 24
+\BOOKMARK [4][-]{subsubsubsection.4.1.3.4}{Function Outline in Pseudocode}{subsubsection.4.1.3}% 25
+\BOOKMARK [4][-]{subsubsubsection.4.1.3.5}{Tracability}{subsubsection.4.1.3}% 26
+\BOOKMARK [3][-]{subsubsection.4.1.4}{Function: getID\(\)}{subsection.4.1}% 27
+\BOOKMARK [4][-]{subsubsubsection.4.1.4.1}{Purpose}{subsubsection.4.1.4}% 28
+\BOOKMARK [4][-]{subsubsubsection.4.1.4.2}{Arguments}{subsubsection.4.1.4}% 29
+\BOOKMARK [4][-]{subsubsubsection.4.1.4.3}{Return Value}{subsubsection.4.1.4}% 30
+\BOOKMARK [4][-]{subsubsubsection.4.1.4.4}{Function Outline in Pseudocode}{subsubsection.4.1.4}% 31
+\BOOKMARK [4][-]{subsubsubsection.4.1.4.5}{Tracability}{subsubsection.4.1.4}% 32
+\BOOKMARK [3][-]{subsubsection.4.1.5}{Function: setID\(\)}{subsection.4.1}% 33
+\BOOKMARK [4][-]{subsubsubsection.4.1.5.1}{Purpose}{subsubsection.4.1.5}% 34
+\BOOKMARK [4][-]{subsubsubsection.4.1.5.2}{Arguments}{subsubsection.4.1.5}% 35
+\BOOKMARK [4][-]{subsubsubsection.4.1.5.3}{Return Value}{subsubsection.4.1.5}% 36
+\BOOKMARK [4][-]{subsubsubsection.4.1.5.4}{Function Outline in Pseudocode}{subsubsection.4.1.5}% 37
+\BOOKMARK [4][-]{subsubsubsection.4.1.5.5}{Tracability}{subsubsection.4.1.5}% 38
+\BOOKMARK [3][-]{subsubsection.4.1.6}{Function: getName\(\)}{subsection.4.1}% 39
+\BOOKMARK [4][-]{subsubsubsection.4.1.6.1}{Purpose}{subsubsection.4.1.6}% 40
+\BOOKMARK [4][-]{subsubsubsection.4.1.6.2}{Arguments}{subsubsection.4.1.6}% 41
+\BOOKMARK [4][-]{subsubsubsection.4.1.6.3}{Return Value}{subsubsection.4.1.6}% 42
+\BOOKMARK [4][-]{subsubsubsection.4.1.6.4}{Function Outline in Pseudocode}{subsubsection.4.1.6}% 43
+\BOOKMARK [4][-]{subsubsubsection.4.1.6.5}{Tracability}{subsubsection.4.1.6}% 44
+\BOOKMARK [3][-]{subsubsection.4.1.7}{Function: setName\(\)}{subsection.4.1}% 45
+\BOOKMARK [4][-]{subsubsubsection.4.1.7.1}{Purpose}{subsubsection.4.1.7}% 46
+\BOOKMARK [4][-]{subsubsubsection.4.1.7.2}{Arguments}{subsubsection.4.1.7}% 47
+\BOOKMARK [4][-]{subsubsubsection.4.1.7.3}{Return Value}{subsubsection.4.1.7}% 48
+\BOOKMARK [4][-]{subsubsubsection.4.1.7.4}{Function Outline in Pseudocode}{subsubsection.4.1.7}% 49
+\BOOKMARK [4][-]{subsubsubsection.4.1.7.5}{Tracability}{subsubsection.4.1.7}% 50
+\BOOKMARK [3][-]{subsubsection.4.1.8}{Function: getDept\(\)}{subsection.4.1}% 51
+\BOOKMARK [4][-]{subsubsubsection.4.1.8.1}{Purpose}{subsubsection.4.1.8}% 52
+\BOOKMARK [4][-]{subsubsubsection.4.1.8.2}{Arguments}{subsubsection.4.1.8}% 53
+\BOOKMARK [4][-]{subsubsubsection.4.1.8.3}{Return Value}{subsubsection.4.1.8}% 54
+\BOOKMARK [4][-]{subsubsubsection.4.1.8.4}{Function Outline in Pseudocode}{subsubsection.4.1.8}% 55
+\BOOKMARK [4][-]{subsubsubsection.4.1.8.5}{Tracability}{subsubsection.4.1.8}% 56
+\BOOKMARK [3][-]{subsubsection.4.1.9}{Function: setDept\(\)}{subsection.4.1}% 57
+\BOOKMARK [4][-]{subsubsubsection.4.1.9.1}{Purpose}{subsubsection.4.1.9}% 58
+\BOOKMARK [4][-]{subsubsubsection.4.1.9.2}{Arguments}{subsubsection.4.1.9}% 59
+\BOOKMARK [4][-]{subsubsubsection.4.1.9.3}{Return Value}{subsubsection.4.1.9}% 60
+\BOOKMARK [4][-]{subsubsubsection.4.1.9.4}{Function Outline in Pseudocode}{subsubsection.4.1.9}% 61
+\BOOKMARK [4][-]{subsubsubsection.4.1.9.5}{Tracability}{subsubsection.4.1.9}% 62
+\BOOKMARK [3][-]{subsubsection.4.1.10}{Function: getSalary\(\)}{subsection.4.1}% 63
+\BOOKMARK [4][-]{subsubsubsection.4.1.10.1}{Purpose}{subsubsection.4.1.10}% 64
+\BOOKMARK [4][-]{subsubsubsection.4.1.10.2}{Arguments}{subsubsection.4.1.10}% 65
+\BOOKMARK [4][-]{subsubsubsection.4.1.10.3}{Return Value}{subsubsection.4.1.10}% 66
+\BOOKMARK [4][-]{subsubsubsection.4.1.10.4}{Function Outline in Pseudocode}{subsubsection.4.1.10}% 67
+\BOOKMARK [4][-]{subsubsubsection.4.1.10.5}{Tracability}{subsubsection.4.1.10}% 68
+\BOOKMARK [3][-]{subsubsection.4.1.11}{Function: setSalary\(\)}{subsection.4.1}% 69
+\BOOKMARK [4][-]{subsubsubsection.4.1.11.1}{Purpose}{subsubsection.4.1.11}% 70
+\BOOKMARK [4][-]{subsubsubsection.4.1.11.2}{Arguments}{subsubsection.4.1.11}% 71
+\BOOKMARK [4][-]{subsubsubsection.4.1.11.3}{Return Value}{subsubsection.4.1.11}% 72
+\BOOKMARK [4][-]{subsubsubsection.4.1.11.4}{Function Outline in Pseudocode}{subsubsection.4.1.11}% 73
+\BOOKMARK [4][-]{subsubsubsection.4.1.11.5}{Tracability}{subsubsection.4.1.11}% 74
+\BOOKMARK [3][-]{subsubsection.4.1.12}{Function: printRecord\(\)}{subsection.4.1}% 75
+\BOOKMARK [4][-]{subsubsubsection.4.1.12.1}{Purpose}{subsubsection.4.1.12}% 76
+\BOOKMARK [4][-]{subsubsubsection.4.1.12.2}{Arguments}{subsubsection.4.1.12}% 77
+\BOOKMARK [4][-]{subsubsubsection.4.1.12.3}{Return Value}{subsubsection.4.1.12}% 78
+\BOOKMARK [4][-]{subsubsubsection.4.1.12.4}{Function Outline in Pseudocode}{subsubsection.4.1.12}% 79
+\BOOKMARK [4][-]{subsubsubsection.4.1.12.5}{Tracability}{subsubsection.4.1.12}% 80
+\BOOKMARK [3][-]{subsubsection.4.1.13}{Function: removeCustomerList\(\)}{subsection.4.1}% 81
+\BOOKMARK [4][-]{subsubsubsection.4.1.13.1}{Purpose}{subsubsection.4.1.13}% 82
+\BOOKMARK [4][-]{subsubsubsection.4.1.13.2}{Arguments}{subsubsection.4.1.13}% 83
+\BOOKMARK [4][-]{subsubsubsection.4.1.13.3}{Return Value}{subsubsection.4.1.13}% 84
+\BOOKMARK [4][-]{subsubsubsection.4.1.13.4}{Function Outline in Pseudocode}{subsubsection.4.1.13}% 85
+\BOOKMARK [4][-]{subsubsubsection.4.1.13.5}{Tracability}{subsubsection.4.1.13}% 86
+\BOOKMARK [3][-]{subsubsection.4.1.14}{Function: destroyCustomerList\(\)}{subsection.4.1}% 87
+\BOOKMARK [4][-]{subsubsubsection.4.1.14.1}{Purpose}{subsubsection.4.1.14}% 88
+\BOOKMARK [4][-]{subsubsubsection.4.1.14.2}{Arguments}{subsubsection.4.1.14}% 89
+\BOOKMARK [4][-]{subsubsubsection.4.1.14.3}{Return Value}{subsubsection.4.1.14}% 90
+\BOOKMARK [4][-]{subsubsubsection.4.1.14.4}{Function Outline in Pseudocode}{subsubsection.4.1.14}% 91
+\BOOKMARK [4][-]{subsubsubsection.4.1.14.5}{Tracability}{subsubsection.4.1.14}% 92
+\BOOKMARK [2][-]{subsection.4.2}{Source File: CustomerList.h and CustomerList.cpp}{section.4}% 93
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Function: CustomerList\(\)}{subsection.4.2}% 94
+\BOOKMARK [4][-]{subsubsubsection.4.2.1.1}{Purpose}{subsubsection.4.2.1}% 95
+\BOOKMARK [4][-]{subsubsubsection.4.2.1.2}{Arguments}{subsubsection.4.2.1}% 96
+\BOOKMARK [4][-]{subsubsubsection.4.2.1.3}{Return Value}{subsubsection.4.2.1}% 97
+\BOOKMARK [4][-]{subsubsubsection.4.2.1.4}{Function Outline in Pseudocode}{subsubsection.4.2.1}% 98
+\BOOKMARK [4][-]{subsubsubsection.4.2.1.5}{Tracability}{subsubsection.4.2.1}% 99
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Function: \176CustomerList\(\)}{subsection.4.2}% 100
+\BOOKMARK [4][-]{subsubsubsection.4.2.2.1}{Purpose}{subsubsection.4.2.2}% 101
+\BOOKMARK [4][-]{subsubsubsection.4.2.2.2}{Arguments}{subsubsection.4.2.2}% 102
+\BOOKMARK [4][-]{subsubsubsection.4.2.2.3}{Return Value}{subsubsection.4.2.2}% 103
+\BOOKMARK [4][-]{subsubsubsection.4.2.2.4}{Function Outline in Pseudocode}{subsubsection.4.2.2}% 104
+\BOOKMARK [4][-]{subsubsubsection.4.2.2.5}{Tracability}{subsubsection.4.2.2}% 105
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Function: addStore\(\)}{subsection.4.2}% 106
+\BOOKMARK [4][-]{subsubsubsection.4.2.3.1}{Purpose}{subsubsection.4.2.3}% 107
+\BOOKMARK [4][-]{subsubsubsection.4.2.3.2}{Arguments}{subsubsection.4.2.3}% 108
+\BOOKMARK [4][-]{subsubsubsection.4.2.3.3}{Return Value}{subsubsection.4.2.3}% 109
+\BOOKMARK [4][-]{subsubsubsection.4.2.3.4}{Function Outline in Pseudocode}{subsubsection.4.2.3}% 110
+\BOOKMARK [4][-]{subsubsubsection.4.2.3.5}{Tracability}{subsubsection.4.2.3}% 111
+\BOOKMARK [3][-]{subsubsection.4.2.4}{Function: removeStore\(\)}{subsection.4.2}% 112
+\BOOKMARK [4][-]{subsubsubsection.4.2.4.1}{Purpose}{subsubsection.4.2.4}% 113
+\BOOKMARK [4][-]{subsubsubsection.4.2.4.2}{Arguments}{subsubsection.4.2.4}% 114
+\BOOKMARK [4][-]{subsubsubsection.4.2.4.3}{Return Value}{subsubsection.4.2.4}% 115
+\BOOKMARK [4][-]{subsubsubsection.4.2.4.4}{Function Outline in Pseudocode}{subsubsection.4.2.4}% 116
+\BOOKMARK [4][-]{subsubsubsection.4.2.4.5}{Tracability}{subsubsection.4.2.4}% 117
+\BOOKMARK [3][-]{subsubsection.4.2.5}{Function: getStore\(\)}{subsection.4.2}% 118
+\BOOKMARK [4][-]{subsubsubsection.4.2.5.1}{Purpose}{subsubsection.4.2.5}% 119
+\BOOKMARK [4][-]{subsubsubsection.4.2.5.2}{Arguments}{subsubsection.4.2.5}% 120
+\BOOKMARK [4][-]{subsubsubsection.4.2.5.3}{Return Value}{subsubsection.4.2.5}% 121
+\BOOKMARK [4][-]{subsubsubsection.4.2.5.4}{Function Outline in Pseudocode}{subsubsection.4.2.5}% 122
+\BOOKMARK [4][-]{subsubsubsection.4.2.5.5}{Tracability}{subsubsection.4.2.5}% 123
+\BOOKMARK [3][-]{subsubsection.4.2.6}{Function: updateStore\(\)}{subsection.4.2}% 124
+\BOOKMARK [4][-]{subsubsubsection.4.2.6.1}{Purpose}{subsubsection.4.2.6}% 125
+\BOOKMARK [4][-]{subsubsubsection.4.2.6.2}{Arguments}{subsubsection.4.2.6}% 126
+\BOOKMARK [4][-]{subsubsubsection.4.2.6.3}{Return Value}{subsubsection.4.2.6}% 127
+\BOOKMARK [4][-]{subsubsubsection.4.2.6.4}{Function Outline in Pseudocode}{subsubsection.4.2.6}% 128
+\BOOKMARK [4][-]{subsubsubsection.4.2.6.5}{Tracability}{subsubsection.4.2.6}% 129
+\BOOKMARK [3][-]{subsubsection.4.2.7}{Function: printStoresInfo\(\)}{subsection.4.2}% 130
+\BOOKMARK [4][-]{subsubsubsection.4.2.7.1}{Purpose}{subsubsection.4.2.7}% 131
+\BOOKMARK [4][-]{subsubsubsection.4.2.7.2}{Arguments}{subsubsection.4.2.7}% 132
+\BOOKMARK [4][-]{subsubsubsection.4.2.7.3}{Return Value}{subsubsection.4.2.7}% 133
+\BOOKMARK [4][-]{subsubsubsection.4.2.7.4}{Function Outline in Pseudocode}{subsubsection.4.2.7}% 134
+\BOOKMARK [4][-]{subsubsubsection.4.2.7.5}{Tracability}{subsubsection.4.2.7}% 135
+\BOOKMARK [2][-]{subsection.4.3}{Source File: EmployeeDatabase.h and EmployeeDatabase.cpp}{section.4}% 136
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Function: EmployeeDatabase\(\)}{subsection.4.3}% 137
+\BOOKMARK [4][-]{subsubsubsection.4.3.1.1}{Purpose}{subsubsection.4.3.1}% 138
+\BOOKMARK [4][-]{subsubsubsection.4.3.1.2}{Arguments}{subsubsection.4.3.1}% 139
+\BOOKMARK [4][-]{subsubsubsection.4.3.1.3}{Return Value}{subsubsection.4.3.1}% 140
+\BOOKMARK [4][-]{subsubsubsection.4.3.1.4}{Function Outline in Pseudocode}{subsubsection.4.3.1}% 141
+\BOOKMARK [4][-]{subsubsubsection.4.3.1.5}{Tracability}{subsubsection.4.3.1}% 142
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Function: \176EmployeeDatabase\(\)}{subsection.4.3}% 143
+\BOOKMARK [4][-]{subsubsubsection.4.3.2.1}{Purpose}{subsubsection.4.3.2}% 144
+\BOOKMARK [4][-]{subsubsubsection.4.3.2.2}{Arguments}{subsubsection.4.3.2}% 145
+\BOOKMARK [4][-]{subsubsubsection.4.3.2.3}{Return Value}{subsubsection.4.3.2}% 146
+\BOOKMARK [4][-]{subsubsubsection.4.3.2.4}{Function Outline in Pseudocode}{subsubsection.4.3.2}% 147
+\BOOKMARK [4][-]{subsubsubsection.4.3.2.5}{Tracability}{subsubsection.4.3.2}% 148
+\BOOKMARK [3][-]{subsubsection.4.3.3}{Function: addEmployee\(\)}{subsection.4.3}% 149
+\BOOKMARK [4][-]{subsubsubsection.4.3.3.1}{Purpose}{subsubsection.4.3.3}% 150
+\BOOKMARK [4][-]{subsubsubsection.4.3.3.2}{Arguments}{subsubsection.4.3.3}% 151
+\BOOKMARK [4][-]{subsubsubsection.4.3.3.3}{Return Value}{subsubsection.4.3.3}% 152
+\BOOKMARK [4][-]{subsubsubsection.4.3.3.4}{Function Outline in Pseudocode}{subsubsection.4.3.3}% 153
+\BOOKMARK [4][-]{subsubsubsection.4.3.3.5}{Tracability}{subsubsection.4.3.3}% 154
+\BOOKMARK [3][-]{subsubsection.4.3.4}{Function: addEmployeeHelp\(\)}{subsection.4.3}% 155
+\BOOKMARK [4][-]{subsubsubsection.4.3.4.1}{Purpose}{subsubsection.4.3.4}% 156
+\BOOKMARK [4][-]{subsubsubsection.4.3.4.2}{Arguments}{subsubsection.4.3.4}% 157
+\BOOKMARK [4][-]{subsubsubsection.4.3.4.3}{Return Value}{subsubsection.4.3.4}% 158
+\BOOKMARK [4][-]{subsubsubsection.4.3.4.4}{Function Outline in Pseudocode}{subsubsection.4.3.4}% 159
+\BOOKMARK [4][-]{subsubsubsection.4.3.4.5}{Tracability}{subsubsection.4.3.4}% 160
+\BOOKMARK [3][-]{subsubsection.4.3.5}{Function: getEmployee\(\)}{subsection.4.3}% 161
+\BOOKMARK [4][-]{subsubsubsection.4.3.5.1}{Purpose}{subsubsection.4.3.5}% 162
+\BOOKMARK [4][-]{subsubsubsection.4.3.5.2}{Arguments}{subsubsection.4.3.5}% 163
+\BOOKMARK [4][-]{subsubsubsection.4.3.5.3}{Return Value}{subsubsection.4.3.5}% 164
+\BOOKMARK [4][-]{subsubsubsection.4.3.5.4}{Function Outline in Pseudocode}{subsubsection.4.3.5}% 165
+\BOOKMARK [4][-]{subsubsubsection.4.3.5.5}{Tracability}{subsubsection.4.3.5}% 166
+\BOOKMARK [3][-]{subsubsection.4.3.6}{Function: getEmployeeHelp\(\)}{subsection.4.3}% 167
+\BOOKMARK [4][-]{subsubsubsection.4.3.6.1}{Purpose}{subsubsection.4.3.6}% 168
+\BOOKMARK [4][-]{subsubsubsection.4.3.6.2}{Arguments}{subsubsection.4.3.6}% 169
+\BOOKMARK [4][-]{subsubsubsection.4.3.6.3}{Return Value}{subsubsection.4.3.6}% 170
+\BOOKMARK [4][-]{subsubsubsection.4.3.6.4}{Function Outline in Pseudocode}{subsubsection.4.3.6}% 171
+\BOOKMARK [4][-]{subsubsubsection.4.3.6.5}{Tracability}{subsubsection.4.3.6}% 172
+\BOOKMARK [3][-]{subsubsection.4.3.7}{Function: removeEmployee\(\)}{subsection.4.3}% 173
+\BOOKMARK [4][-]{subsubsubsection.4.3.7.1}{Purpose}{subsubsection.4.3.7}% 174
+\BOOKMARK [4][-]{subsubsubsection.4.3.7.2}{Arguments}{subsubsection.4.3.7}% 175
+\BOOKMARK [4][-]{subsubsubsection.4.3.7.3}{Return Value}{subsubsection.4.3.7}% 176
+\BOOKMARK [4][-]{subsubsubsection.4.3.7.4}{Function Outline in Pseudocode}{subsubsection.4.3.7}% 177
+\BOOKMARK [4][-]{subsubsubsection.4.3.7.5}{Tracability}{subsubsection.4.3.7}% 178
+\BOOKMARK [3][-]{subsubsection.4.3.8}{Function: removeEmployeeHelp\(\)}{subsection.4.3}% 179
+\BOOKMARK [4][-]{subsubsubsection.4.3.8.1}{Purpose}{subsubsection.4.3.8}% 180
+\BOOKMARK [4][-]{subsubsubsection.4.3.8.2}{Arguments}{subsubsection.4.3.8}% 181
+\BOOKMARK [4][-]{subsubsubsection.4.3.8.3}{Return Value}{subsubsection.4.3.8}% 182
+\BOOKMARK [4][-]{subsubsubsection.4.3.8.4}{Function Outline in Pseudocode}{subsubsection.4.3.8}% 183
+\BOOKMARK [4][-]{subsubsubsection.4.3.8.5}{Tracability}{subsubsection.4.3.8}% 184
+\BOOKMARK [3][-]{subsubsection.4.3.9}{Function: handleRemoveEmployee\(\)}{subsection.4.3}% 185
+\BOOKMARK [4][-]{subsubsubsection.4.3.9.1}{Purpose}{subsubsection.4.3.9}% 186
+\BOOKMARK [4][-]{subsubsubsection.4.3.9.2}{Arguments}{subsubsection.4.3.9}% 187
+\BOOKMARK [4][-]{subsubsubsection.4.3.9.3}{Return Value}{subsubsection.4.3.9}% 188
+\BOOKMARK [4][-]{subsubsubsection.4.3.9.4}{Function Outline in Pseudocode}{subsubsection.4.3.9}% 189
+\BOOKMARK [4][-]{subsubsubsection.4.3.9.5}{Tracability}{subsubsection.4.3.9}% 190
+\BOOKMARK [3][-]{subsubsection.4.3.10}{Function: getPredecessor\(\)}{subsection.4.3}% 191
+\BOOKMARK [4][-]{subsubsubsection.4.3.10.1}{Purpose}{subsubsection.4.3.10}% 192
+\BOOKMARK [4][-]{subsubsubsection.4.3.10.2}{Arguments}{subsubsection.4.3.10}% 193
+\BOOKMARK [4][-]{subsubsubsection.4.3.10.3}{Return Value}{subsubsection.4.3.10}% 194
+\BOOKMARK [4][-]{subsubsubsection.4.3.10.4}{Function Outline in Pseudocode}{subsubsection.4.3.10}% 195
+\BOOKMARK [4][-]{subsubsubsection.4.3.10.5}{Tracability}{subsubsection.4.3.10}% 196
+\BOOKMARK [3][-]{subsubsection.4.3.11}{Function: printEmployeeRecords\(\)}{subsection.4.3}% 197
+\BOOKMARK [4][-]{subsubsubsection.4.3.11.1}{Purpose}{subsubsection.4.3.11}% 198
+\BOOKMARK [4][-]{subsubsubsection.4.3.11.2}{Arguments}{subsubsection.4.3.11}% 199
+\BOOKMARK [4][-]{subsubsubsection.4.3.11.3}{Return Value}{subsubsection.4.3.11}% 200
+\BOOKMARK [4][-]{subsubsubsection.4.3.11.4}{Function Outline in Pseudocode}{subsubsection.4.3.11}% 201
+\BOOKMARK [4][-]{subsubsubsection.4.3.11.5}{Tracability}{subsubsection.4.3.11}% 202
+\BOOKMARK [3][-]{subsubsection.4.3.12}{Function: printEmployeeRecords\(\)}{subsection.4.3}% 203
+\BOOKMARK [4][-]{subsubsubsection.4.3.12.1}{Purpose}{subsubsection.4.3.12}% 204
+\BOOKMARK [4][-]{subsubsubsection.4.3.12.2}{Arguments}{subsubsection.4.3.12}% 205
+\BOOKMARK [4][-]{subsubsubsection.4.3.12.3}{Return Value}{subsubsection.4.3.12}% 206
+\BOOKMARK [4][-]{subsubsubsection.4.3.12.4}{Function Outline in Pseudocode}{subsubsection.4.3.12}% 207
+\BOOKMARK [4][-]{subsubsubsection.4.3.12.5}{Tracability}{subsubsection.4.3.12}% 208
+\BOOKMARK [3][-]{subsubsection.4.3.13}{Function: buildDatabase\(\)}{subsection.4.3}% 209
+\BOOKMARK [4][-]{subsubsubsection.4.3.13.1}{Purpose}{subsubsection.4.3.13}% 210
+\BOOKMARK [4][-]{subsubsubsection.4.3.13.2}{Arguments}{subsubsection.4.3.13}% 211
+\BOOKMARK [4][-]{subsubsubsection.4.3.13.3}{Return Value}{subsubsection.4.3.13}% 212
+\BOOKMARK [4][-]{subsubsubsection.4.3.13.4}{Function Outline in Pseudocode}{subsubsection.4.3.13}% 213
+\BOOKMARK [4][-]{subsubsubsection.4.3.13.5}{Tracability}{subsubsection.4.3.13}% 214
+\BOOKMARK [3][-]{subsubsection.4.3.14}{Function: destroyTree\(\)}{subsection.4.3}% 215
+\BOOKMARK [4][-]{subsubsubsection.4.3.14.1}{Purpose}{subsubsection.4.3.14}% 216
+\BOOKMARK [4][-]{subsubsubsection.4.3.14.2}{Arguments}{subsubsection.4.3.14}% 217
+\BOOKMARK [4][-]{subsubsubsection.4.3.14.3}{Return Value}{subsubsection.4.3.14}% 218
+\BOOKMARK [4][-]{subsubsubsection.4.3.14.4}{Function Outline in Pseudocode}{subsubsection.4.3.14}% 219
+\BOOKMARK [4][-]{subsubsubsection.4.3.14.5}{Tracability}{subsubsection.4.3.14}% 220
